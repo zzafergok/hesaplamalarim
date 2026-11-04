@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -62,7 +62,7 @@ export function CategoryDetailScreen({
             Hesaplamalar
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <span className="font-bold italic text-tulpar-blue">
+          <span className="font-bold italic text-hesaplamalarim-blue">
             {category.shortTitle}
           </span>
         </div>
@@ -84,7 +84,7 @@ export function CategoryDetailScreen({
       <GamificationHud />
 
       {/* 3. Kategori Başlık Kartı */}
-      <div className="relative overflow-hidden rounded-2xl border border-tulpar-blue/35 bg-gradient-to-br from-obsidian via-void-black/90 to-tulpar-blue/10 p-6 shadow-md sm:p-8">
+      <div className="relative overflow-hidden rounded-2xl border border-hesaplamalarim-blue/35 bg-gradient-to-br from-obsidian via-void-black/90 to-hesaplamalarim-blue/10 p-6 shadow-md sm:p-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-2">
             <Badge
@@ -119,11 +119,11 @@ export function CategoryDetailScreen({
                 href={`/hesaplamalar/${tool.categoryId}/${tool.id}`}
                 className="block h-full"
               >
-                <Card className="relative h-full overflow-hidden border-gunmetal/70 bg-obsidian/95 transition-all hover:border-tulpar-blue/60 hover:shadow-lg">
+                <Card className="relative h-full overflow-hidden border-gunmetal/70 bg-obsidian/95 transition-all hover:border-hesaplamalarim-blue/60 hover:shadow-lg">
                   <CardContent className="flex h-full flex-col justify-between p-5">
                     <div className="space-y-3">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-tulpar-blue/40 bg-tulpar-blue/15 text-tulpar-blue">
+                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-hesaplamalarim-blue/40 bg-hesaplamalarim-blue/15 text-hesaplamalarim-blue">
                           <Calculator className="h-4 w-4" />
                         </span>
                         <Badge
@@ -136,7 +136,7 @@ export function CategoryDetailScreen({
                               Keşfedildi (+25 XP)
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 text-tulpar-blue">
+                            <span className="inline-flex items-center gap-1 text-hesaplamalarim-blue">
                               <Compass className="h-3 w-3" />
                               Yeni Görev (+75 XP)
                             </span>
@@ -158,7 +158,7 @@ export function CategoryDetailScreen({
                       <span className="font-mono text-2xs font-medium italic text-ash">
                         {tool.fields.length} Parametre
                       </span>
-                      <span className="font-mono text-compact font-bold text-tulpar-blue">
+                      <span className="font-mono text-compact font-bold text-hesaplamalarim-blue">
                         Aracı Aç →
                       </span>
                     </div>

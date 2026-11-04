@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Dialog as SheetPrimitive } from 'radix-ui';
@@ -94,7 +94,7 @@ export const SheetContent = React.forwardRef<
         {showCloseButton && (
           <SheetPrimitive.Close
             data-slot="sheet-close"
-            className="rounded-xs absolute right-4 top-4 text-ash opacity-70 transition-opacity hover:text-white hover:opacity-100 focus:outline-none focus:ring-1 focus:ring-tulpar-blue/50 disabled:pointer-events-none [&_svg]:size-4"
+            className="rounded-xs absolute right-4 top-4 text-ash opacity-70 transition-opacity hover:text-white hover:opacity-100 focus:outline-none focus:ring-1 focus:ring-hesaplamalarim-blue/50 disabled:pointer-events-none [&_svg]:size-4"
           >
             <XIcon />
             <span className="sr-only">Close</span>

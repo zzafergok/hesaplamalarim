@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
@@ -116,7 +116,7 @@ function FieldLabel({
       className={cn(
         'group/field-label peer/field-label flex w-fit gap-2 leading-snug text-titanium group-data-[disabled=true]/field:opacity-50',
         'has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-sm has-[>[data-slot=field]]:border has-[>[data-slot=field]]:border-gunmetal/30 [&>[data-slot=field]]:p-4',
-        'has-data-[state=checked]:border-tulpar-blue has-data-[state=checked]:bg-tulpar-blue/10',
+        'has-data-[state=checked]:border-hesaplamalarim-blue has-data-[state=checked]:bg-hesaplamalarim-blue/10',
         className,
       )}
       {...props}
@@ -144,7 +144,7 @@ function FieldDescription({ className, ...props }: React.ComponentProps<'p'>) {
       className={cn(
         'text-sm font-normal leading-normal text-ash group-has-[[data-orientation=horizontal]]/field:text-balance',
         'nth-last-2:-mt-1 last:mt-0 [[data-variant=legend]+&]:-mt-1.5',
-        '[&>a:hover]:text-tulpar-blue [&>a]:underline [&>a]:underline-offset-4',
+        '[&>a:hover]:text-hesaplamalarim-blue [&>a]:underline [&>a]:underline-offset-4',
         className,
       )}
       {...props}

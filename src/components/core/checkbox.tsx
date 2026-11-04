@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Checkbox as CheckboxPrimitive } from 'radix-ui';
@@ -15,11 +15,11 @@ export const Checkbox = React.forwardRef<
     className={cn(
       'shadow-xs peer size-4 shrink-0 rounded-[4px] border border-gunmetal/80 bg-obsidian text-white outline-none transition-shadow',
       'hover:border-gunmetal hover:bg-gunmetal/20',
-      'focus-visible:border-tulpar-blue focus-visible:ring-[3px] focus-visible:ring-tulpar-blue/20',
+      'focus-visible:border-hesaplamalarim-blue focus-visible:ring-[3px] focus-visible:ring-hesaplamalarim-blue/20',
       'disabled:cursor-not-allowed disabled:opacity-50',
       'aria-invalid:border-alert-red aria-invalid:ring-alert-red/20',
-      'data-[state=checked]:border-tulpar-blue data-[state=checked]:bg-tulpar-blue data-[state=checked]:text-white',
-      'data-[state=indeterminate]:border-tulpar-blue data-[state=indeterminate]:bg-tulpar-blue data-[state=indeterminate]:text-white',
+      'data-[state=checked]:border-hesaplamalarim-blue data-[state=checked]:bg-hesaplamalarim-blue data-[state=checked]:text-white',
+      'data-[state=indeterminate]:border-hesaplamalarim-blue data-[state=indeterminate]:bg-hesaplamalarim-blue data-[state=indeterminate]:text-white',
       className,
     )}
     {...props}

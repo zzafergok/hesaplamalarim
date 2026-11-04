@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -76,7 +76,7 @@ export function Calendar({
         ),
         week: cn(defaultClassNames.week, 'mt-2 flex w-full'),
         day: cn(
-          'relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-tulpar-blue/10 [&:has([aria-selected].day-range-end)]:rounded-e-sm [&:has([aria-selected].day-outside)]:bg-transparent',
+          'relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-hesaplamalarim-blue/10 [&:has([aria-selected].day-range-end)]:rounded-e-sm [&:has([aria-selected].day-outside)]:bg-transparent',
           props.mode === 'range'
             ? '[&:has(>.day-range-end)]:rounded-e-sm [&:has(>.day-range-start)]:rounded-s-sm first:[&:has([aria-selected])]:rounded-s-sm last:[&:has([aria-selected])]:rounded-e-sm'
             : '[&:has([aria-selected])]:rounded-sm',
@@ -86,17 +86,17 @@ export function Calendar({
           'size-9 rounded-sm p-0 font-normal transition-colors hover:bg-gunmetal/40 hover:text-white aria-selected:opacity-100',
         ),
         range_start:
-          'day-range-start rounded-s-sm bg-tulpar-blue text-white hover:bg-tulpar-blue',
+          'day-range-start rounded-s-sm bg-hesaplamalarim-blue text-white hover:bg-hesaplamalarim-blue',
         range_end:
-          'day-range-end rounded-e-sm bg-tulpar-blue text-white hover:bg-tulpar-blue',
+          'day-range-end rounded-e-sm bg-hesaplamalarim-blue text-white hover:bg-hesaplamalarim-blue',
         selected:
-          'rounded-sm bg-tulpar-blue text-white hover:bg-tulpar-blue hover:text-white focus:bg-tulpar-blue focus:text-white',
-        today: 'rounded-sm bg-gunmetal/40 font-bold text-tulpar-blue',
+          'rounded-sm bg-hesaplamalarim-blue text-white hover:bg-hesaplamalarim-blue hover:text-white focus:bg-hesaplamalarim-blue focus:text-white',
+        today: 'rounded-sm bg-gunmetal/40 font-bold text-hesaplamalarim-blue',
         outside:
-          'day-outside text-ash/40 aria-selected:bg-tulpar-blue/5 aria-selected:text-ash/60',
+          'day-outside text-ash/40 aria-selected:bg-hesaplamalarim-blue/5 aria-selected:text-ash/60',
         disabled: 'cursor-not-allowed text-ash/30 opacity-50',
         range_middle:
-          'rounded-none aria-selected:bg-tulpar-blue/10 aria-selected:text-tulpar-blue',
+          'rounded-none aria-selected:bg-hesaplamalarim-blue/10 aria-selected:text-hesaplamalarim-blue',
         hidden: 'invisible',
         ...classNames,
       }}

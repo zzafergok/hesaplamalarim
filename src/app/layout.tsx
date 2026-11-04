@@ -4,6 +4,9 @@ import {
   Plus_Jakarta_Sans,
   Space_Grotesk,
 } from 'next/font/google';
+import './typeset.css';
+import './styles/tokens-light.css';
+import './styles/tokens-dark.css';
 import './globals.css';
 import { Toaster } from '@/components/core/toast';
 import { getCurrentLocale } from '@/lib/i18n/server-locale';

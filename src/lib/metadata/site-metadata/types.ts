@@ -5,7 +5,7 @@ export type RouteRobots = {
   follow: boolean;
 };
 
-export type RouteSection = 'public';
+export type RouteSection = 'public' | 'admin' | 'auth';
 
 export type MetadataRouteId = 'publicHome' | 'hesaplamalar';
 

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { cn } from '@/lib/utils';
@@ -27,7 +27,7 @@ export const Attachment = React.forwardRef<HTMLDivElement, AttachmentProps>(
         data-orientation={orientation}
         className={cn(
           attachmentVariants({ orientation, size, state }),
-          'has-[[data-slot=attachment-trigger]]:hover:border-tulpar-blue/50 has-[[data-slot=attachment-trigger]]:hover:bg-gunmetal/20',
+          'has-[[data-slot=attachment-trigger]]:hover:border-hesaplamalarim-blue/50 has-[[data-slot=attachment-trigger]]:hover:bg-gunmetal/20',
           className,
         )}
         {...props}

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { AlertCircle } from 'lucide-react';
 import { useFormContext, Controller } from 'react-hook-form';
@@ -84,7 +84,7 @@ export function DateField({
         htmlFor={name}
         className="font-sans text-compact font-semibold tracking-tight text-titanium"
       >
-        {label} {required && <span className="text-tulpar-blue">*</span>}
+        {label} {required && <span className="text-hesaplamalarim-blue">*</span>}
       </Label>
       <Controller
         name={name}

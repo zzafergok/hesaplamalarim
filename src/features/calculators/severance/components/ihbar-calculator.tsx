@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
@@ -95,7 +95,7 @@ export function IhbarCalculator() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-tulpar-blue font-sans text-body-sm font-bold text-primary-foreground hover:bg-tulpar-blue/90"
+                  className="w-full bg-hesaplamalarim-blue font-sans text-body-sm font-bold text-primary-foreground hover:bg-hesaplamalarim-blue/90"
                 >
                   İhbar Tazminatını Hesapla
                 </Button>

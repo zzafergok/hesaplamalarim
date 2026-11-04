@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -86,7 +86,7 @@ export function CalculatorHub() {
           </h2>
           <p className="mt-1.5 max-w-2xl font-sans text-body-sm font-normal leading-relaxed text-ash">
             İster aşağıdan anında hesaplayıp{' '}
-            <span className="font-semibold italic text-tulpar-blue">
+            <span className="font-semibold italic text-hesaplamalarim-blue">
               XP kazan
             </span>
             , ister her aracın kendi özel sayfasına giderek detaylı analiz yap.
@@ -186,8 +186,8 @@ export function CalculatorHub() {
                         <Card
                           className={
                             isSelected
-                              ? 'border-tulpar-blue bg-tulpar-blue/10 shadow-md'
-                              : 'border-gunmetal/70 bg-obsidian/90 hover:border-tulpar-blue/50'
+                              ? 'border-hesaplamalarim-blue bg-hesaplamalarim-blue/10 shadow-md'
+                              : 'border-gunmetal/70 bg-obsidian/90 hover:border-hesaplamalarim-blue/50'
                           }
                         >
                           <CardContent className="flex items-center justify-between gap-2 p-3.5">
@@ -198,7 +198,7 @@ export function CalculatorHub() {
                               onClick={() => setSelectedCalcId(tool.id)}
                               className="h-auto flex-1 justify-start px-1 py-0.5 text-left"
                             >
-                              <Calculator className="mr-2 h-4 w-4 shrink-0 text-tulpar-blue" />
+                              <Calculator className="mr-2 h-4 w-4 shrink-0 text-hesaplamalarim-blue" />
                               <div className="min-w-0">
                                 <div className="truncate font-display text-caption font-bold text-titanium">
                                   {tool.shortTitle}
@@ -210,7 +210,7 @@ export function CalculatorHub() {
                                       Keşfedildi
                                     </span>
                                   ) : (
-                                    <span className="inline-flex items-center gap-1 font-semibold text-tulpar-blue">
+                                    <span className="inline-flex items-center gap-1 font-semibold text-hesaplamalarim-blue">
                                       <Compass className="h-3 w-3" />
                                       +75 XP Keşfet
                                     </span>

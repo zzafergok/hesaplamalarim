@@ -43,3 +43,7 @@ Bu dosya, kullanıcı geri bildirimleri, mimari denetimler ve geliştirme sürec
 ## 8. Submit Button İçeriği
 
 - **İkon ve metin hizalaması:** `SubmitButton` çağıranları SVG ve metni `children` olarak birlikte geçebilir. Ortak bileşen, bu içeriği `inline-flex items-center whitespace-nowrap` sarmalayıcısında tutarak dar viewport'larda satır kırılmasını ve buton taşmasını engellemelidir.
+
+## 9. Next.js 16 (Turbopack) & CSS İçe Aktarımları
+
+- **CSS İçi @import Yasağı:** Next.js 16 App Router ve Turbopack derleyicisinde CSS dosyaları içinde @import './other.css' kullanılması Unexpected token AtKeyword("import") derleme hatasına yol açar. Modüler CSS ve tema token dosyaları (	ypeset.css, 	okens-light.css, 	okens-dark.css, globals.css) doğrudan kök layout.tsx dosyası üzerinden sırasıyla import edilmelidir.

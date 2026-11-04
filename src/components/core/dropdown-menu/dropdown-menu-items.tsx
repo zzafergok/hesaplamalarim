@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { CheckIcon, CircleIcon } from 'lucide-react';
@@ -53,7 +53,7 @@ export function DropdownMenuCheckboxItem({
       checked={checked}
       {...props}
     >
-      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-tulpar-blue">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-hesaplamalarim-blue">
         <DropdownMenuPrimitive.ItemIndicator>
           <CheckIcon className="size-4" />
         </DropdownMenuPrimitive.ItemIndicator>
@@ -80,7 +80,7 @@ export function DropdownMenuRadioItem({
       )}
       {...props}
     >
-      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-tulpar-blue">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-hesaplamalarim-blue">
         <DropdownMenuPrimitive.ItemIndicator>
           <CircleIcon className="size-2 fill-current" />
         </DropdownMenuPrimitive.ItemIndicator>

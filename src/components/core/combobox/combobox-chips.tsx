@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Combobox as ComboboxPrimitive } from '@base-ui/react';
@@ -16,7 +16,7 @@ export function ComboboxChips({
       data-slot="combobox-chips"
       className={cn(
         'shadow-xs flex min-h-9 flex-wrap items-center gap-1.5 rounded-sm border border-gunmetal/80 bg-obsidian bg-clip-padding px-2.5 py-1.5 text-sm transition-[color,box-shadow]',
-        'focus-within:border-tulpar-blue focus-within:ring-[3px] focus-within:ring-tulpar-blue/20',
+        'focus-within:border-hesaplamalarim-blue focus-within:ring-[3px] focus-within:ring-hesaplamalarim-blue/20',
         'has-aria-invalid:border-alert-red has-aria-invalid:ring-[3px] has-aria-invalid:ring-alert-red/20',
         'has-data-[slot=combobox-chip]:px-1.5',
         className,

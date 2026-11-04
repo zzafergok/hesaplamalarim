@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Questionnaire as QuestionnairePrimitive } from '@shadcn/react/questionnaire';
@@ -32,9 +32,9 @@ export function QuestionnaireChoice({
       data-slot="questionnaire-choice"
       className={cn(
         'group/questionnaire-choice relative flex min-h-11 cursor-pointer select-none items-start gap-2.5 rounded-sm border border-gunmetal/80 bg-obsidian/40 px-3 py-2.5 text-start text-sm text-titanium outline-none transition-colors hover:bg-gunmetal/30',
-        'has-[>input:focus-visible]:border-tulpar-blue has-[>input:focus-visible]:ring-1 has-[>input:focus-visible]:ring-tulpar-blue/50',
+        'has-[>input:focus-visible]:border-hesaplamalarim-blue has-[>input:focus-visible]:ring-1 has-[>input:focus-visible]:ring-hesaplamalarim-blue/50',
         'data-invalid:border-alert-red',
-        'data-checked:border-tulpar-blue data-checked:bg-tulpar-blue/10',
+        'data-checked:border-hesaplamalarim-blue data-checked:bg-hesaplamalarim-blue/10',
         'data-disabled:pointer-events-none data-disabled:cursor-not-allowed data-disabled:opacity-50',
         className,
       )}
@@ -47,7 +47,7 @@ export function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="rounded-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-checked/questionnaire-choice:border-tulpar-blue group-data-checked/questionnaire-choice:bg-tulpar-blue group-data-checked/questionnaire-choice:text-white pointer-events-none relative flex size-4 shrink-0 translate-y-0.5 items-center justify-center border border-gunmetal/80 bg-void-black group-data-[type=radio]/questionnaire-choice:rounded-full"
+        className="rounded-xs group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-checked/questionnaire-choice:border-hesaplamalarim-blue group-data-checked/questionnaire-choice:bg-hesaplamalarim-blue group-data-checked/questionnaire-choice:text-white pointer-events-none relative flex size-4 shrink-0 translate-y-0.5 items-center justify-center border border-gunmetal/80 bg-void-black group-data-[type=radio]/questionnaire-choice:rounded-full"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
@@ -98,10 +98,10 @@ export function QuestionnaireInput({
         data-slot="questionnaire-input"
         className={cn(
           'h-8 min-h-11 w-full min-w-0 rounded-sm border border-gunmetal/80 bg-void-black px-2.5 py-1 text-base text-titanium outline-none transition-[color,box-shadow,background-color]',
-          'focus-visible:border-tulpar-blue focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+          'focus-visible:border-hesaplamalarim-blue focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
           'disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50',
           'aria-invalid:border-alert-red aria-invalid:ring-1 aria-invalid:ring-alert-red/30',
-          'selection:bg-tulpar-blue selection:text-white placeholder:text-ash/50 sm:min-h-0 md:text-sm',
+          'selection:bg-hesaplamalarim-blue selection:text-white placeholder:text-ash/50 sm:min-h-0 md:text-sm',
           className,
         )}
         {...props}

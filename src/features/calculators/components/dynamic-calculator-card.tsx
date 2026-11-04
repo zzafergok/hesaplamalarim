@@ -66,12 +66,17 @@ export function DynamicCalculatorCard({
   const [result, setResult] = useState<CalculatorExecutionResult>(() =>
     calculator.calculate(defaultValues),
   );
+  const [prevCalcId, setPrevCalcId] = useState<string>(calculator.id);
   const [tick, setTick] = useState<number>(0);
+
+  if (prevCalcId !== calculator.id) {
+    setPrevCalcId(calculator.id);
+    setResult(calculator.calculate(defaultValues));
+  }
 
   useEffect(() => {
     methods.reset(defaultValues);
-    setResult(calculator.calculate(defaultValues));
-  }, [calculator, defaultValues, methods]);
+  }, [defaultValues, methods]);
 
   const onSubmit = (values: CalculatorFormRawValues) => {
     const computed = calculator.calculate(values);
@@ -107,7 +112,7 @@ export function DynamicCalculatorCard({
                   onClick={() => toggleFavorite(calculator.id)}
                   className={
                     isFavorite
-                      ? 'border-tulpar-gold/60 bg-tulpar-gold/10 font-sans text-micro font-bold text-tulpar-gold'
+                      ? 'border-hesaplamalarim-gold/60 bg-hesaplamalarim-gold/10 font-sans text-micro font-bold text-hesaplamalarim-gold'
                       : 'border-gunmetal/80 font-sans text-micro font-medium text-ash'
                   }
                 >
@@ -132,7 +137,7 @@ export function DynamicCalculatorCard({
               </div>
             </div>
             {calculator.legalNote && (
-              <p className="mt-1 font-mono text-2xs font-medium italic text-tulpar-blue">
+              <p className="mt-1 font-mono text-2xs font-medium italic text-hesaplamalarim-blue">
                 {calculator.legalNote}
               </p>
             )}
@@ -196,7 +201,7 @@ export function DynamicCalculatorCard({
 
                 <Button
                   type="submit"
-                  className="w-full bg-tulpar-blue font-sans text-body-sm font-bold text-primary-foreground shadow-md hover:bg-tulpar-blue/90"
+                  className="w-full bg-hesaplamalarim-blue font-sans text-body-sm font-bold text-primary-foreground shadow-md hover:bg-hesaplamalarim-blue/90"
                 >
                   <Zap className="mr-1.5 h-4 w-4" />
                   Hesapla ve +25 XP Kazan

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { AlertCircle } from 'lucide-react';
 import { useFormContext } from 'react-hook-form';
@@ -74,7 +74,7 @@ export function TextField({
           hideLabel && 'sr-only',
         )}
       >
-        {label} {required && <span className="text-tulpar-blue">*</span>}
+        {label} {required && <span className="text-hesaplamalarim-blue">*</span>}
       </Label>
       <Input
         id={name}

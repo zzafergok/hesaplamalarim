@@ -15,12 +15,10 @@ export const kidemFormSchema = z
       .min(1, 'Aylık brüt maaş sıfırdan büyük olmalıdır'),
     aylikDuzenliYanHaklar: z
       .number({ invalid_type_error: 'Geçerli bir tutar giriniz' })
-      .min(0, 'Yan haklar negatif olamaz')
-      .default(0),
+      .min(0, 'Yan haklar negatif olamaz'),
     dusulecekGunSayisi: z
       .number({ invalid_type_error: 'Geçerli bir gün sayısı giriniz' })
-      .min(0, 'Düşülecek gün sayısı negatif olamaz')
-      .default(0),
+      .min(0, 'Düşülecek gün sayısı negatif olamaz'),
   })
   .refine(
     (data) => {
@@ -45,9 +43,7 @@ export const ihbarFormSchema = z.object({
   gelirVergisiOrani: z
     .number()
     .min(0.15)
-    .max(0.4)
-    .default(0.15),
+    .max(0.4),
 });
 
 export type IhbarFormValues = z.infer<typeof ihbarFormSchema>;
-

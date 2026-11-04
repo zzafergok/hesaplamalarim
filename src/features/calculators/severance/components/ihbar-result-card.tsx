@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/core/card';
 import { formatCurrency } from '@/lib/utils';
@@ -10,18 +10,18 @@ interface IhbarResultCardProps {
 
 export function IhbarResultCard({ result }: IhbarResultCardProps) {
   return (
-    <Card className="border-tulpar-blue/40 bg-obsidian/95 shadow-md backdrop-blur-sm">
+    <Card className="border-hesaplamalarim-blue/40 bg-obsidian/95 shadow-md backdrop-blur-sm">
       <CardHeader className="pb-3">
         <CardTitle className="font-display text-heading-sm font-bold text-titanium">
           İhbar Tazminatı Sonucu
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="rounded-xl border border-tulpar-blue/30 bg-void-black/80 p-4">
+        <div className="rounded-xl border border-hesaplamalarim-blue/30 bg-void-black/80 p-4">
           <div className="font-mono text-2xs font-semibold uppercase tracking-wider text-ash">
             Ödenecek Net İhbar Tazminatı
           </div>
-          <div className="mt-1 font-mono text-metric font-extrabold tabular-nums text-tulpar-blue">
+          <div className="mt-1 font-mono text-metric font-extrabold tabular-nums text-hesaplamalarim-blue">
             {formatCurrency(result.netIhbarTazminati, 'TRY', 'tr-TR')}
           </div>
           <div className="mt-1.5 font-sans text-compact font-normal italic text-ash">

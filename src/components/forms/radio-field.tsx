@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { AlertCircle } from 'lucide-react';
 import { useFormContext, Controller } from 'react-hook-form';
@@ -51,7 +51,7 @@ export function RadioField({
   return (
     <div className={cn('space-y-1.5 sm:space-y-2', className)}>
       <Label className="text-xs sm:text-sm">
-        {label} {required && <span className="text-tulpar-blue">*</span>}
+        {label} {required && <span className="text-hesaplamalarim-blue">*</span>}
       </Label>
       {description && !error && (
         <p className="text-2xs text-ash/60 sm:text-xs">{description}</p>

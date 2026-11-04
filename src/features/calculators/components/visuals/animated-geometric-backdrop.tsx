@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
 
@@ -28,7 +28,7 @@ export function AnimatedGeometricBackdrop() {
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute -left-24 -top-24 h-96 w-96 rounded-[3rem] border border-tulpar-blue/20 bg-gradient-to-br from-tulpar-blue/10 via-transparent to-signal-green/5 blur-[1px]"
+        className="absolute -left-24 -top-24 h-96 w-96 rounded-[3rem] border border-hesaplamalarim-blue/20 bg-gradient-to-br from-hesaplamalarim-blue/10 via-transparent to-signal-green/5 blur-[1px]"
       />
 
       {/* Floating Right Isometric Diamond / Prism */}
@@ -46,7 +46,7 @@ export function AnimatedGeometricBackdrop() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute right-[6%] top-[18%] h-44 w-44 rotate-45 rounded-2xl border border-tulpar-blue/25 bg-tulpar-blue/5 backdrop-blur-[1px]"
+        className="absolute right-[6%] top-[18%] h-44 w-44 rotate-45 rounded-2xl border border-hesaplamalarim-blue/25 bg-hesaplamalarim-blue/5 backdrop-blur-[1px]"
       />
 
       {/* Bottom-Left Concentric Mathematical Rings */}
@@ -66,7 +66,7 @@ export function AnimatedGeometricBackdrop() {
         }}
         className="absolute bottom-[8%] left-[8%] flex h-64 w-64 items-center justify-center rounded-full border border-dashed border-gunmetal/70"
       >
-        <div className="h-40 w-40 rotate-12 rounded-2xl border border-tulpar-blue/20" />
+        <div className="h-40 w-40 rotate-12 rounded-2xl border border-hesaplamalarim-blue/20" />
       </motion.div>
 
       {/* Floating Geometric Math & Finance Glyphs */}
@@ -94,7 +94,7 @@ export function AnimatedGeometricBackdrop() {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute select-none font-mono text-3xl font-extrabold italic text-tulpar-blue/25 sm:text-4xl"
+          className="absolute select-none font-mono text-3xl font-extrabold italic text-hesaplamalarim-blue/25 sm:text-4xl"
         >
           {item.glyph}
         </motion.span>

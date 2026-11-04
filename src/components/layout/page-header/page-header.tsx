@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Badge } from '@/components/core/badge';
 import { cn } from '@/lib/utils';
 import type { PageHeaderProps } from './types';
@@ -22,7 +22,7 @@ export function PageHeader({
           {badge && (
             <div>
               {typeof badge === 'string' ? (
-                <Badge className="rounded-none border-tulpar-blue/30 bg-tulpar-blue/10 text-tulpar-blue">
+                <Badge className="rounded-none border-hesaplamalarim-blue/30 bg-hesaplamalarim-blue/10 text-hesaplamalarim-blue">
                   {badge}
                 </Badge>
               ) : (

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
@@ -35,7 +35,7 @@ export const AttachmentAction = React.forwardRef<
     data-slot="attachment-action"
     variant={variant}
     className={cn(
-      'size-7 rounded-sm p-0 text-ash hover:bg-gunmetal/40 hover:text-white focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+      'size-7 rounded-sm p-0 text-ash hover:bg-gunmetal/40 hover:text-white focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
       className,
     )}
     {...props}
@@ -54,7 +54,7 @@ export const AttachmentTrigger = React.forwardRef<
       data-slot="attachment-trigger"
       type={asChild ? undefined : 'button'}
       className={cn(
-        'absolute inset-0 z-0 cursor-pointer rounded-sm outline-none focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+        'absolute inset-0 z-0 cursor-pointer rounded-sm outline-none focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
         className,
       )}
       {...props}

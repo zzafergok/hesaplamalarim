@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 
 const SHADES = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950'];
 
@@ -73,10 +73,10 @@ const config = {
         titanium: createColorScale('titanium', 'titanium'),
         ash: createColorScale('ash', 'ash'),
 
-        'tulpar-blue': createColorScale('tulpar-blue', 'tulpar-blue'),
-        'tulpar-gold': createColorScale('warning', 'tulpar-gold'),
-        'tulpar-firuze': 'hsl(var(--tulpar-firuze) / <alpha-value>)',
-        'tulpar-cosmic': 'hsl(var(--tulpar-cosmic) / <alpha-value>)',
+        'hesaplamalarim-blue': createColorScale('hesaplamalarim-blue', 'hesaplamalarim-blue'),
+        'hesaplamalarim-gold': createColorScale('warning', 'hesaplamalarim-gold'),
+        'hesaplamalarim-firuze': 'hsl(var(--hesaplamalarim-firuze) / <alpha-value>)',
+        'hesaplamalarim-cosmic': 'hsl(var(--hesaplamalarim-cosmic) / <alpha-value>)',
         'signal-green': createColorScale('success', 'signal-green'),
         'alert-red': createColorScale('error', 'alert-red'),
       },

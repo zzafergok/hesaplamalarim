@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { RadioGroup as RadioGroupPrimitive } from 'radix-ui';
@@ -30,8 +30,8 @@ const RadioGroupItem = React.forwardRef<
       ref={ref}
       data-slot="radio-group-item"
       className={cn(
-        'shadow-xs aspect-square size-4 rounded-full border border-gunmetal/80 bg-void-black text-tulpar-blue outline-none transition-colors',
-        'focus-visible:border-tulpar-blue focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+        'shadow-xs aspect-square size-4 rounded-full border border-gunmetal/80 bg-void-black text-hesaplamalarim-blue outline-none transition-colors',
+        'focus-visible:border-hesaplamalarim-blue focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
         'disabled:cursor-not-allowed disabled:opacity-50',
         'aria-invalid:border-alert-red aria-invalid:ring-1 aria-invalid:ring-alert-red/30',
         className,
@@ -42,7 +42,7 @@ const RadioGroupItem = React.forwardRef<
         data-slot="radio-group-indicator"
         className="flex items-center justify-center"
       >
-        <Circle className="size-2 fill-tulpar-blue text-tulpar-blue" />
+        <Circle className="size-2 fill-hesaplamalarim-blue text-hesaplamalarim-blue" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   );

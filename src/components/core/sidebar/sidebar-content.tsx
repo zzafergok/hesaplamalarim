@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
@@ -101,7 +101,7 @@ export const SidebarGroupLabel = React.forwardRef<
       data-sidebar="group-label"
       data-slot="sidebar-group-label"
       className={cn(
-        'rounded-xs flex h-8 shrink-0 items-center px-2 font-mono text-xs font-medium text-ash outline-none transition-[margin,opa] duration-200 ease-linear focus-visible:ring-1 focus-visible:ring-tulpar-blue/50 [&>svg]:size-4 [&>svg]:shrink-0',
+        'rounded-xs flex h-8 shrink-0 items-center px-2 font-mono text-xs font-medium text-ash outline-none transition-[margin,opa] duration-200 ease-linear focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50 [&>svg]:size-4 [&>svg]:shrink-0',
         'group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0',
         className,
       )}
@@ -123,7 +123,7 @@ export const SidebarGroupAction = React.forwardRef<
       data-sidebar="group-action"
       data-slot="sidebar-group-action"
       className={cn(
-        'rounded-xs absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center p-0 text-ash outline-none transition-transform hover:bg-gunmetal/40 hover:text-white focus-visible:ring-1 focus-visible:ring-tulpar-blue/50 [&>svg]:size-4 [&>svg]:shrink-0',
+        'rounded-xs absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center p-0 text-ash outline-none transition-transform hover:bg-gunmetal/40 hover:text-white focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50 [&>svg]:size-4 [&>svg]:shrink-0',
         // Increases the hit area of the button on mobile.
         'after:absolute after:-inset-2 md:after:hidden',
         'group-data-[collapsible=icon]:hidden',
@@ -159,7 +159,7 @@ export const SidebarInput = React.forwardRef<
       data-sidebar="input"
       data-slot="sidebar-input"
       className={cn(
-        'h-8 w-full bg-void-black shadow-none focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+        'h-8 w-full bg-void-black shadow-none focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
         className,
       )}
       {...props}

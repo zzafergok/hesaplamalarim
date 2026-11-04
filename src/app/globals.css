@@ -1,7 +1,3 @@
-@import './typeset.css';
-@import './styles/tokens-light.css';
-@import './styles/tokens-dark.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,7 +16,7 @@
 
   html,
   body {
-    @apply bg-background font-sans text-body-sm font-normal text-foreground antialiased selection:bg-tulpar-blue/20;
+    @apply bg-background font-sans text-body-sm font-normal text-foreground antialiased selection:bg-hesaplamalarim-blue/20;
   }
 
   h1,
@@ -82,10 +78,10 @@ input[type='number'] {
 }
 
 /* Adaptive Radial Glow */
-.tulpar-glow-radial {
+.hesaplamalarim-glow-radial {
   background: radial-gradient(
     circle at center,
-    hsl(var(--tulpar-blue) / 0.14) 0%,
+    hsl(var(--hesaplamalarim-blue) / 0.14) 0%,
     transparent 70%
   );
 }

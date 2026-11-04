@@ -1,1 +1,1 @@
-export { AdminShell, AuthShell, PublicShell } from './app-shell';
+export { PublicShell, BrandMark } from './app-shell';

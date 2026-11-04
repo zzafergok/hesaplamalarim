@@ -8,8 +8,8 @@ export function buildRootMetadata(
 ): Metadata {
   const title =
     locale === 'tr'
-      ? 'Tulpar | Next.js Uygulama Şablonu & Türk Kültür Atlası'
-      : 'Tulpar | Next.js Application Template & Culture Atlas';
+      ? 'Hesaplamalarım | Güncel Finans ve Çalışma Hayatı Hesaplama Platformu'
+      : 'Hesaplamalarim | Financial & Employment Calculations Platform';
 
   return {
     metadataBase: siteMetadata.url,
@@ -116,3 +116,4 @@ export function buildRootMetadata(
     },
   };
 }
+

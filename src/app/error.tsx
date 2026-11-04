@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
@@ -53,7 +53,7 @@ export default function RootError({
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <Button
               onClick={() => reset()}
-              className="h-10 rounded-none bg-tulpar-blue font-bold uppercase tracking-wider text-white hover:bg-tulpar-blue/90"
+              className="h-10 rounded-none bg-hesaplamalarim-blue font-bold uppercase tracking-wider text-white hover:bg-hesaplamalarim-blue/90"
             >
               <RefreshCw className="mr-2 h-4 w-4" />
               Tekrar Dene

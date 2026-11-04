@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowDown, Calculator, Sparkles, Trophy } from 'lucide-react';
@@ -16,12 +16,12 @@ export function HomeHero({
   hero: PublicHomeCopy['hero'];
 }) {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-tulpar-blue/35 bg-gradient-to-br from-obsidian via-void-black/95 to-tulpar-blue/10 p-6 shadow-xl sm:p-10 lg:p-12">
+    <section className="relative overflow-hidden rounded-3xl border border-hesaplamalarim-blue/35 bg-gradient-to-br from-obsidian via-void-black/95 to-hesaplamalarim-blue/10 p-6 shadow-xl sm:p-10 lg:p-12">
       {/* Animated Floating Geometric Shapes Inside Hero */}
       <motion.div
         animate={{ rotate: [0, 360], scale: [1, 1.15, 1] }}
         transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
-        className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rotate-12 rounded-3xl border border-tulpar-blue/25 bg-tulpar-blue/10"
+        className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rotate-12 rounded-3xl border border-hesaplamalarim-blue/25 bg-hesaplamalarim-blue/10"
       />
       <motion.div
         animate={{ rotate: [360, 0], y: [0, 20, 0] }}
@@ -70,7 +70,7 @@ export function HomeHero({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.18 }}
-          className="mt-2 font-sans text-caption font-medium italic text-tulpar-blue"
+          className="mt-2 font-sans text-caption font-medium italic text-hesaplamalarim-blue"
         >
           Her hesaplama aracı kendi özel SEO sayfasında çalışır; hesaplama
           yaptıkça XP ve kaşif rozetleri kazanırsın.
@@ -80,7 +80,7 @@ export function HomeHero({
           <Button
             asChild
             size="default"
-            className="bg-tulpar-blue font-sans text-body-sm font-bold text-primary-foreground shadow-md hover:bg-tulpar-blue/90"
+            className="bg-hesaplamalarim-blue font-sans text-body-sm font-bold text-primary-foreground shadow-md hover:bg-hesaplamalarim-blue/90"
           >
             <Link href="#hesaplama-araclari">
               <Calculator className="mr-2 h-4 w-4" />
@@ -96,7 +96,7 @@ export function HomeHero({
             className="font-sans text-body-sm font-semibold"
           >
             <Link href="/hesaplamalar">
-              <Trophy className="mr-2 h-4 w-4 text-tulpar-gold" />
+              <Trophy className="mr-2 h-4 w-4 text-hesaplamalarim-gold" />
               33 Özel Hesaplama Sayfasını Keşfet
             </Link>
           </Button>

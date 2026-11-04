@@ -19,9 +19,10 @@ import {
 export function toRouteDescriptor(
   input: RouteMetadataInput,
 ): RouteMetadataDescriptor {
-  const section = input.section ?? inferRouteSection(input.path);
-  const robots = input.robots ?? inferRouteRobots(input.path, section);
-  const fallbackTitle = input.title ?? humanizePath(input.path);
+  const path = input.path ?? '/';
+  const section = input.section ?? inferRouteSection(path);
+  const robots = input.robots ?? inferRouteRobots(path, section);
+  const fallbackTitle = input.title ?? humanizePath(path);
   const fallbackDescription =
     input.description ??
     `${fallbackTitle} screen in the ${siteMetadata.name} application foundation.`;
@@ -30,7 +31,7 @@ export function toRouteDescriptor(
     `${fallbackTitle} route generated from path-level metadata defaults.`;
 
   return {
-    path: input.path,
+    path,
     section,
     robots,
     locale: {

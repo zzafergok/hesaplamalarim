@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Switch as SwitchPrimitive } from 'radix-ui';
@@ -20,10 +20,10 @@ export const Switch = React.forwardRef<
     data-size={size}
     className={cn(
       'group/switch shadow-xs peer inline-flex shrink-0 cursor-pointer items-center rounded-sm border-2 border-transparent outline-none transition-all',
-      'focus-visible:border-tulpar-blue/70 focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+      'focus-visible:border-hesaplamalarim-blue/70 focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
       'disabled:cursor-not-allowed disabled:opacity-50',
       'aria-invalid:border-alert-red aria-invalid:ring-1 aria-invalid:ring-alert-red/30',
-      'data-[state=checked]:bg-tulpar-blue data-[state=unchecked]:bg-gunmetal/80',
+      'data-[state=checked]:bg-hesaplamalarim-blue data-[state=unchecked]:bg-gunmetal/80',
       'data-[size=default]:h-5 data-[size=default]:w-9',
       'data-[size=sm]:h-4 data-[size=sm]:w-7',
       className,

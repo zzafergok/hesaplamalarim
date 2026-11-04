@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { Check } from 'lucide-react';
@@ -68,7 +68,7 @@ export function StepperItem({
           className={cn(
             'flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 font-mono text-xs font-bold transition-colors sm:h-10 sm:w-10 sm:text-sm',
             isActive || isCompleted
-              ? 'border-tulpar-blue bg-tulpar-blue text-white'
+              ? 'border-hesaplamalarim-blue bg-hesaplamalarim-blue text-white'
               : 'border-border bg-background text-muted-foreground',
           )}
         >
@@ -86,7 +86,7 @@ export function StepperItem({
             className={cn(
               'text-2xs font-bold uppercase tracking-wider sm:text-xs',
               isActive
-                ? 'text-tulpar-blue'
+                ? 'text-hesaplamalarim-blue'
                 : isCompleted
                   ? 'text-foreground'
                   : 'text-muted-foreground',
@@ -106,7 +106,7 @@ export function StepperItem({
           aria-hidden="true"
           className={cn(
             'mx-2 mt-[18px] h-0.5 min-w-3 flex-1 transition-colors sm:mx-4 sm:mt-5',
-            isCompleted ? 'bg-tulpar-blue' : 'bg-border',
+            isCompleted ? 'bg-hesaplamalarim-blue' : 'bg-border',
           )}
         />
       )}

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 
@@ -20,7 +20,7 @@ export const CompactControl = React.forwardRef<
     ref={ref}
     variant={variant}
     className={cn(
-      'relative inline-flex h-8 min-w-8 items-center justify-center overflow-hidden rounded-none border border-gunmetal px-2 text-ash transition-colors hover:border-tulpar-blue/50 hover:text-titanium',
+      'relative inline-flex h-8 min-w-8 items-center justify-center overflow-hidden rounded-none border border-gunmetal px-2 text-ash transition-colors hover:border-hesaplamalarim-blue/50 hover:text-titanium',
       className,
     )}
     data-slot="compact-control"

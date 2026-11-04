@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Toast as ToastPrimitive } from '@base-ui/react';
@@ -20,11 +20,11 @@ function ToastIcon({ type }: { type?: string }) {
     case 'error':
       return <AlertCircleIcon className="size-4 shrink-0 text-alert-red" />;
     case 'warning':
-      return <AlertTriangleIcon className="size-4 shrink-0 text-tulpar-gold" />;
+      return <AlertTriangleIcon className="size-4 shrink-0 text-hesaplamalarim-gold" />;
     case 'loading':
       return <Loader2Icon className="size-4 shrink-0 animate-spin text-ash" />;
     case 'info':
-      return <InfoIcon className="size-4 shrink-0 text-tulpar-blue" />;
+      return <InfoIcon className="size-4 shrink-0 text-hesaplamalarim-blue" />;
     default:
       return null;
   }
@@ -72,14 +72,14 @@ export function ToastList() {
               data-slot="toast-action"
               {...t.actionProps}
               className={cn(
-                'rounded-xs inline-flex h-7 shrink-0 items-center justify-center border border-gunmetal/80 bg-void-black px-2.5 font-mono text-xs font-medium text-titanium transition-colors hover:bg-gunmetal/40 focus:outline-none focus:ring-1 focus:ring-tulpar-blue/50 disabled:pointer-events-none disabled:opacity-50',
+                'rounded-xs inline-flex h-7 shrink-0 items-center justify-center border border-gunmetal/80 bg-void-black px-2.5 font-mono text-xs font-medium text-titanium transition-colors hover:bg-gunmetal/40 focus:outline-none focus:ring-1 focus:ring-hesaplamalarim-blue/50 disabled:pointer-events-none disabled:opacity-50',
                 t.actionProps.className,
               )}
             />
           )}
           <ToastPrimitive.Close
             data-slot="toast-close"
-            className="rounded-xs shrink-0 p-1 text-ash opacity-70 transition-opacity hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring-1 focus:ring-tulpar-blue/50"
+            className="rounded-xs shrink-0 p-1 text-ash opacity-70 transition-opacity hover:text-white hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring-1 focus:ring-hesaplamalarim-blue/50"
           >
             <XIcon className="size-4" />
           </ToastPrimitive.Close>

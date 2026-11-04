@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
@@ -33,9 +33,9 @@ export function SidebarNav({
         if (collapsed) {
           const collapsedClassName = `flex h-12 w-full items-center justify-center overflow-hidden border transition-all ${
             isActive
-              ? 'cursor-default border-l-4 border-tulpar-blue/40 border-l-tulpar-blue bg-background text-foreground shadow-md'
+              ? 'cursor-default border-l-4 border-hesaplamalarim-blue/40 border-l-hesaplamalarim-blue bg-background text-foreground shadow-md'
               : item.highlight
-                ? 'cursor-pointer border-border bg-background/40 text-tulpar-blue hover:border-muted-foreground hover:text-foreground'
+                ? 'cursor-pointer border-border bg-background/40 text-hesaplamalarim-blue hover:border-muted-foreground hover:text-foreground'
                 : 'cursor-pointer border-transparent text-muted-foreground hover:border-border hover:bg-background/60 hover:text-foreground'
           }`;
 
@@ -43,7 +43,7 @@ export function SidebarNav({
             <Icon
               className={`h-5 w-5 shrink-0 ${
                 isActive
-                  ? 'text-tulpar-blue'
+                  ? 'text-hesaplamalarim-blue'
                   : item.highlight
                     ? 'text-warning'
                     : 'text-muted-foreground'
@@ -90,9 +90,9 @@ export function SidebarNav({
 
         const expandedClassName = `flex h-14 w-full items-center justify-between gap-2 overflow-hidden border px-3.5 transition-all ${
           isActive
-            ? 'cursor-default border-l-4 border-tulpar-blue/40 border-l-tulpar-blue bg-background text-foreground shadow-md'
+            ? 'cursor-default border-l-4 border-hesaplamalarim-blue/40 border-l-hesaplamalarim-blue bg-background text-foreground shadow-md'
             : item.highlight
-              ? 'cursor-pointer border-border bg-background/40 text-tulpar-blue hover:border-muted-foreground hover:text-foreground'
+              ? 'cursor-pointer border-border bg-background/40 text-hesaplamalarim-blue hover:border-muted-foreground hover:text-foreground'
               : 'cursor-pointer border-transparent text-muted-foreground hover:border-border hover:bg-background/60 hover:text-foreground'
         }`;
 
@@ -102,7 +102,7 @@ export function SidebarNav({
               <Icon
                 className={`h-4 w-4 shrink-0 ${
                   isActive
-                    ? 'text-tulpar-blue'
+                    ? 'text-hesaplamalarim-blue'
                     : item.highlight
                       ? 'text-warning'
                       : 'text-muted-foreground'
@@ -126,7 +126,7 @@ export function SidebarNav({
               </span>
             </span>
             {isActive && (
-              <ChevronRight className="h-3.5 w-3.5 shrink-0 text-tulpar-blue" />
+              <ChevronRight className="h-3.5 w-3.5 shrink-0 text-hesaplamalarim-blue" />
             )}
           </>
         );

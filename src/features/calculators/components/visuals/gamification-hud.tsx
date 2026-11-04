@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { Award, Compass, Flame, Sparkles, Trophy } from 'lucide-react';
@@ -31,12 +31,12 @@ export function GamificationHud() {
   const discoveryPercent = Math.round((discoveredCount / totalTools) * 100);
 
   return (
-    <Card className="relative overflow-hidden border-tulpar-blue/35 bg-gradient-to-r from-obsidian via-void-black/90 to-obsidian shadow-md backdrop-blur-md">
+    <Card className="relative overflow-hidden border-hesaplamalarim-blue/35 bg-gradient-to-r from-obsidian via-void-black/90 to-obsidian shadow-md backdrop-blur-md">
       {/* Animated Geometric Corner Accent */}
       <motion.div
         animate={{ rotate: [0, 90, 180, 270, 360] }}
         transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
-        className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-2xl border border-tulpar-blue/25 bg-tulpar-blue/5"
+        className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-2xl border border-hesaplamalarim-blue/25 bg-hesaplamalarim-blue/5"
       />
 
       <CardContent className="p-4 sm:p-5">
@@ -45,7 +45,7 @@ export function GamificationHud() {
           <div className="flex items-center gap-3.5 lg:col-span-4">
             <motion.div
               whileHover={{ scale: 1.06, rotate: 6 }}
-              className="flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-xl border border-tulpar-blue/45 bg-tulpar-blue/15 text-tulpar-blue shadow-sm"
+              className="flex h-12 w-12 shrink-0 flex-col items-center justify-center rounded-xl border border-hesaplamalarim-blue/45 bg-hesaplamalarim-blue/15 text-hesaplamalarim-blue shadow-sm"
             >
               <span className="font-mono text-micro font-bold uppercase leading-none">
                 LVL
@@ -60,7 +60,7 @@ export function GamificationHud() {
                 <span className="truncate font-display text-body-sm font-bold tracking-tight text-titanium">
                   {levelInfo.rankTitle}
                 </span>
-                <span className="font-mono text-2xs font-semibold italic tabular-nums text-tulpar-blue">
+                <span className="font-mono text-2xs font-semibold italic tabular-nums text-hesaplamalarim-blue">
                   {levelInfo.currentXp} / {levelInfo.nextLevelXp} XP
                 </span>
               </div>
@@ -83,7 +83,7 @@ export function GamificationHud() {
             </div>
 
             <div className="flex items-center gap-2 rounded-lg border border-gunmetal/70 bg-void-black/75 px-3 py-2">
-              <Flame className="h-4 w-4 shrink-0 text-tulpar-gold" />
+              <Flame className="h-4 w-4 shrink-0 text-hesaplamalarim-gold" />
               <div>
                 <div className="font-sans text-2xs font-normal italic text-ash">
                   Toplam İşlem
@@ -95,7 +95,7 @@ export function GamificationHud() {
             </div>
 
             <div className="col-span-2 flex items-center gap-2 rounded-lg border border-gunmetal/70 bg-void-black/75 px-3 py-2 sm:col-span-1">
-              <Trophy className="h-4 w-4 shrink-0 text-tulpar-blue" />
+              <Trophy className="h-4 w-4 shrink-0 text-hesaplamalarim-blue" />
               <div>
                 <div className="font-sans text-2xs font-normal italic text-ash">
                   Başarımlar
@@ -133,7 +133,7 @@ export function GamificationHud() {
                         variant={unlocked ? 'default' : 'outline'}
                         className={
                           unlocked
-                            ? 'border-tulpar-blue/40 bg-tulpar-blue/15 font-sans text-micro font-bold text-tulpar-blue'
+                            ? 'border-hesaplamalarim-blue/40 bg-hesaplamalarim-blue/15 font-sans text-micro font-bold text-hesaplamalarim-blue'
                             : 'border-gunmetal/70 font-sans text-micro font-normal italic text-ash/70'
                         }
                       >
@@ -158,12 +158,12 @@ export function GamificationHud() {
               <Link
                 key={item.calcId}
                 href={`/hesaplamalar/${item.categoryId}/${item.calcId}`}
-                className="inline-flex items-center gap-1.5 rounded-md border border-gunmetal/70 bg-void-black/80 px-2.5 py-1 text-2xs text-ash transition-colors hover:border-tulpar-blue/60 hover:text-titanium"
+                className="inline-flex items-center gap-1.5 rounded-md border border-gunmetal/70 bg-void-black/80 px-2.5 py-1 text-2xs text-ash transition-colors hover:border-hesaplamalarim-blue/60 hover:text-titanium"
               >
                 <span className="font-sans font-semibold text-titanium">
                   {item.title}:
                 </span>
-                <span className="font-mono font-bold tabular-nums text-tulpar-blue">
+                <span className="font-mono font-bold tabular-nums text-hesaplamalarim-blue">
                   {item.primaryValue}
                 </span>
               </Link>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import type { Column, RowData } from '@tanstack/react-table';
@@ -52,9 +52,9 @@ export function DataTableColumnHeader<TData extends RowData, TValue = unknown>({
           >
             <span>{title}</span>
             {isSorted === 'desc' ? (
-              <ArrowDown className="ml-2 size-3.5 text-tulpar-blue" />
+              <ArrowDown className="ml-2 size-3.5 text-hesaplamalarim-blue" />
             ) : isSorted === 'asc' ? (
-              <ArrowUp className="ml-2 size-3.5 text-tulpar-blue" />
+              <ArrowUp className="ml-2 size-3.5 text-hesaplamalarim-blue" />
             ) : (
               <ChevronsUpDown className="ml-2 size-3.5 opacity-50" />
             )}

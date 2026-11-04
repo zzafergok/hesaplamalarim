@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useMemo } from 'react';
 import { Calendar as CalendarIcon, X } from 'lucide-react';
@@ -56,7 +56,7 @@ export function QuickDatesSidebar({
             key={offsetDays}
             variant="ghost"
             size="sm"
-            className="h-8 w-full justify-start truncate px-2 text-compact font-normal hover:bg-tulpar-blue/10"
+            className="h-8 w-full justify-start truncate px-2 text-compact font-normal hover:bg-hesaplamalarim-blue/10"
             onClick={() => onQuickDateSelect(offsetDays)}
           >
             {quickDates[index]}

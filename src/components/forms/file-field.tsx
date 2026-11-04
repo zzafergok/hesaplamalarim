@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef } from 'react';
 import { AlertCircle } from 'lucide-react';
@@ -67,7 +67,7 @@ export function FileField({
         htmlFor={name}
         className="font-mono text-2xs uppercase tracking-wider text-ash"
       >
-        {label} {required && <span className="text-tulpar-blue">*</span>}
+        {label} {required && <span className="text-hesaplamalarim-blue">*</span>}
       </Label>
       <Controller
         name={name}

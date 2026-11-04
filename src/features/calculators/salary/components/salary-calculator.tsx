@@ -2,7 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
-import { FormProvider, useForm } from 'react-hook-form';
+import { FormProvider, useForm, useWatch } from 'react-hook-form';
 
 import { Button } from '@/components/core/button';
 import {
@@ -42,7 +42,11 @@ export function SalaryCalculator() {
     },
   });
 
-  const hesaplamaYonu = methods.watch('hesaplamaYonu');
+  const watchedYonu = useWatch({
+    control: methods.control,
+    name: 'hesaplamaYonu',
+  });
+  const hesaplamaYonu = watchedYonu ?? 'brutten-nete';
 
   const onSubmit = (values: SalaryFormValues) => {
     const tutar = Number(values.tutar);
@@ -102,7 +106,7 @@ export function SalaryCalculator() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-tulpar-blue font-sans text-body-sm font-bold text-primary-foreground hover:bg-tulpar-blue/90"
+                  className="w-full bg-hesaplamalarim-blue font-sans text-body-sm font-bold text-primary-foreground hover:bg-hesaplamalarim-blue/90"
                 >
                   Maaşı Hesapla
                 </Button>

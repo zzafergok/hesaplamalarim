@@ -1,5 +1,3 @@
-export { AdminAppShellLayout } from './AdminAppShellLayout';
-export { AppShellLayout } from './AppShellLayout';
 export { ApplicationShell } from './application-shell';
 export type {
   ApplicationShellProps,

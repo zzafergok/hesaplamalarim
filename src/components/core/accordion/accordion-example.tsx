@@ -19,24 +19,24 @@ export function AccordionExample() {
     <div className="mx-auto max-w-2xl space-y-10 p-6">
       {/* 1. Basic Accordion */}
       <section className="space-y-3">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-tulpar-blue">
+        <h3 className="text-sm font-bold uppercase tracking-wider text-hesaplamalarim-blue">
           1. Basic (Single & Collapsible)
         </h3>
         <Accordion type="single" collapsible defaultValue="item-1">
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              EriÅŸilebilirlik standartlarÄ±na uygun mu?
+              Erişilebilirlik standartlarına uygun mu?
             </AccordionTrigger>
             <AccordionContent>
-              Evet. Radix UI primitives kullanÄ±larak WAI-ARIA standartlarÄ±na ve
-              klavye gezinim kurallarÄ±na tam uyumlu olarak geliÅŸtirilmiÅŸtir.
+              Evet. Radix UI primitives kullanılarak WAI-ARIA standartlarına ve
+              klavye gezinim kurallarına tam uyumlu olarak geliştirilmiştir.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Ã–zelleÅŸtirilebilir mi?</AccordionTrigger>
+            <AccordionTrigger>Özelleştirilebilir mi?</AccordionTrigger>
             <AccordionContent>
-              Kesinlikle. Tulpar brutalist tasarÄ±m tokenlarÄ± ve Tailwind
-              sÄ±nÄ±flarÄ± ile kolayca Ã¶zelleÅŸtirilebilir.
+              Kesinlikle. Hesaplamalarım brutalist tasarım tokenları ve Tailwind
+              sınıfları ile kolayca özelleştirilebilir.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -44,21 +44,21 @@ export function AccordionExample() {
 
       {/* 2. Multiple Accordion */}
       <section className="space-y-3">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-tulpar-blue">
-          2. Multiple (Ã‡oklu AÃ§Ä±lÄ±ÅŸ)
+        <h3 className="text-sm font-bold uppercase tracking-wider text-hesaplamalarim-blue">
+          2. Multiple (Çoklu Açılış)
         </h3>
         <Accordion type="multiple" defaultValue={['multi-1']}>
           <AccordionItem value="multi-1">
-            <AccordionTrigger>AynÄ± anda birden fazla sekme aÃ§Ä±labilir mi?</AccordionTrigger>
+            <AccordionTrigger>Aynı anda birden fazla sekme açılabilir mi?</AccordionTrigger>
             <AccordionContent>
-              Evet, Ã§oklu seÃ§im modu sayesinde kullanÄ±cÄ± dilediÄŸi kadar sekmeyi aÃ§Ä±k bÄ±rakabilir.
+              Evet, çoklu seçim modu sayesinde kullanıcı dilediği kadar sekmeyi açık bırakabilir.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="multi-2">
-            <AccordionTrigger>Animasyon performansÄ± nasÄ±ldÄ±r?</AccordionTrigger>
+            <AccordionTrigger>Animasyon performansı nasıldır?</AccordionTrigger>
             <AccordionContent>
-              CSS keyframe tabanlÄ± donanÄ±m hÄ±zlandÄ±rmalÄ± animasyonlar
-              (`accordion-down` / `accordion-up`) kullanÄ±lÄ±r.
+              CSS keyframe tabanlı donanım hızlandırmalı animasyonlar
+              (`accordion-down` / `accordion-up`) kullanılır.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -66,20 +66,20 @@ export function AccordionExample() {
 
       {/* 3. Disabled Item */}
       <section className="space-y-3">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-tulpar-blue">
-          3. Disabled (Devre DÄ±ÅŸÄ± Ã–ÄŸe)
+        <h3 className="text-sm font-bold uppercase tracking-wider text-hesaplamalarim-blue">
+          3. Disabled (Devre Dışı Öğe)
         </h3>
         <Accordion type="single" collapsible>
           <AccordionItem value="active-1">
-            <AccordionTrigger>Aktif Ã–ÄŸe</AccordionTrigger>
+            <AccordionTrigger>Aktif Öğe</AccordionTrigger>
             <AccordionContent>
-              Bu Ã¶ÄŸe tÄ±klanabilir ve aÃ§Ä±lÄ±p kapanabilir.
+              Bu öğe tıklanabilir ve açılıp kapanabilir.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="disabled-1" disabled>
-            <AccordionTrigger>Devre DÄ±ÅŸÄ± Ã–ÄŸe (Disabled)</AccordionTrigger>
+            <AccordionTrigger>Devre Dışı Öğe (Disabled)</AccordionTrigger>
             <AccordionContent>
-              Bu iÃ§erik aÃ§Ä±lmaz Ã§Ã¼nkÃ¼ Ã¶ÄŸe devre dÄ±ÅŸÄ±dÄ±r.
+              Bu içerik açılmaz çünkü öğe devre dışıdır.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -87,8 +87,8 @@ export function AccordionExample() {
 
       {/* 4. Borders Variant */}
       <section className="space-y-3">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-tulpar-blue">
-          4. Borders (KenarlÄ±klÄ± Varyant)
+        <h3 className="text-sm font-bold uppercase tracking-wider text-hesaplamalarim-blue">
+          4. Borders (Kenarlıklı Varyant)
         </h3>
         <Accordion
           type="single"
@@ -96,16 +96,16 @@ export function AccordionExample() {
           className="rounded-sm border border-gunmetal/30 px-4"
         >
           <AccordionItem value="border-1">
-            <AccordionTrigger>KenarlÄ±klÄ± Kutu YapÄ±sÄ±</AccordionTrigger>
+            <AccordionTrigger>Kenarlıklı Kutu Yapısı</AccordionTrigger>
             <AccordionContent>
-              KÃ¶k elemana `border` ve `rounded-sm` eklenerek Ã§erÃ§eveli bir kutu
-              gÃ¶rÃ¼nÃ¼mÃ¼ elde edilir.
+              Kök elemana `border` ve `rounded-sm` eklenerek çerçeveli bir kutu
+              görünümü elde edilir.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="border-2">
-            <AccordionTrigger>Son Ã–ÄŸe KenarlÄ±k DavranÄ±ÅŸÄ±</AccordionTrigger>
+            <AccordionTrigger>Son Öğe Kenarlık Davranışı</AccordionTrigger>
             <AccordionContent>
-              `last:border-b-0` sÄ±nÄ±fÄ± ile son Ã¶ÄŸenin alt Ã§izgisi temizlenir.
+              `last:border-b-0` sınıfı ile son öğenin alt çizgisi temizlenir.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -113,24 +113,24 @@ export function AccordionExample() {
 
       {/* 5. Card Wrapped */}
       <section className="space-y-3">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-tulpar-blue">
-          5. Card Ä°Ã§inde KullanÄ±m
+        <h3 className="text-sm font-bold uppercase tracking-wider text-hesaplamalarim-blue">
+          5. Card İçinde Kullanım
         </h3>
         <Card>
           <CardHeader>
             <CardTitle className="text-base font-medium">
-              SÄ±kÃ§a Sorulan Sorular
+              Sıkça Sorulan Sorular
             </CardTitle>
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible>
               <AccordionItem value="card-1">
                 <AccordionTrigger>
-                  Tulpar bileÅŸen mimarisi nasÄ±ldÄ±r?
+                  Hesaplamalarım bileşen mimarisi nasıldır?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Her bileÅŸen 250 satÄ±r kuralÄ±na, modÃ¼ler TypeScript mimarisine
-                  ve Radix UI eriÅŸilebilirlik standartlarÄ±na uyar.
+                  Her bileşen 250 satır kuralına, modüler TypeScript mimarisine
+                  ve Radix UI erişilebilirlik standartlarına uyar.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -140,3 +140,4 @@ export function AccordionExample() {
     </div>
   );
 }
+

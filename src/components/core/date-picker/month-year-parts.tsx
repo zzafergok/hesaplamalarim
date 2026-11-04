@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -75,10 +75,10 @@ export function MonthYearGrid({
               className={cn(
                 'relative flex h-10 items-center justify-center px-3 text-sm font-normal',
                 'text-titanium hover:bg-gunmetal/20',
-                selected && 'bg-tulpar-blue text-white hover:bg-tulpar-blue/90',
+                selected && 'bg-hesaplamalarim-blue text-white hover:bg-hesaplamalarim-blue/90',
                 current &&
                   !selected &&
-                  'border border-tulpar-blue/20 bg-tulpar-blue/10 text-tulpar-blue',
+                  'border border-hesaplamalarim-blue/20 bg-hesaplamalarim-blue/10 text-hesaplamalarim-blue',
                 disabled && 'cursor-not-allowed opacity-50',
               )}
               onClick={() => !disabled && onMonthSelect(index)}
@@ -86,7 +86,7 @@ export function MonthYearGrid({
             >
               {month}
               {current && !selected && (
-                <div className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full bg-tulpar-blue" />
+                <div className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full bg-hesaplamalarim-blue" />
               )}
             </Button>
           );
@@ -125,7 +125,7 @@ export function MonthYearSidebar({ onQuickDateSelect }: MonthYearSidebarProps) {
             key={quickDate.label}
             variant="ghost"
             size="sm"
-            className="h-8 w-full justify-start px-2 text-xs font-normal hover:bg-tulpar-blue/10"
+            className="h-8 w-full justify-start px-2 text-xs font-normal hover:bg-hesaplamalarim-blue/10"
             onClick={() => onQuickDateSelect(quickDate)}
           >
             {quickDate.label}

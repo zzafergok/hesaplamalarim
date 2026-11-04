@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -90,7 +90,7 @@ export function CalculatorDetailScreen({
             {categoryMeta.shortTitle}
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <span className="font-bold italic text-tulpar-blue">
+          <span className="font-bold italic text-hesaplamalarim-blue">
             {calculator.shortTitle}
           </span>
         </div>
@@ -162,7 +162,7 @@ export function CalculatorDetailScreen({
                   href={`/hesaplamalar/${item.categoryId}/${item.id}`}
                   className="block h-full"
                 >
-                  <Card className="h-full border-gunmetal/70 bg-obsidian/90 transition-colors hover:border-tulpar-blue/55">
+                  <Card className="h-full border-gunmetal/70 bg-obsidian/90 transition-colors hover:border-hesaplamalarim-blue/55">
                     <CardContent className="flex h-full flex-col justify-between p-4">
                       <div>
                         <div className="mb-2 flex items-center justify-between gap-2">
@@ -176,7 +176,7 @@ export function CalculatorDetailScreen({
                                 Keşfedildi
                               </span>
                             ) : (
-                              <span className="inline-flex items-center gap-1 text-tulpar-blue">
+                              <span className="inline-flex items-center gap-1 text-hesaplamalarim-blue">
                                 <Compass className="h-3 w-3" />
                                 +75 XP Keşif
                               </span>
@@ -190,7 +190,7 @@ export function CalculatorDetailScreen({
                           {item.description}
                         </p>
                       </div>
-                      <div className="mt-3 font-mono text-2xs font-bold italic text-tulpar-blue">
+                      <div className="mt-3 font-mono text-2xs font-bold italic text-hesaplamalarim-blue">
                         Hesaplama Sayfasına Git →
                       </div>
                     </CardContent>

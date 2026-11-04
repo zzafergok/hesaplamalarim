@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { cn } from '@/lib/utils';
@@ -92,7 +92,7 @@ export const NativeSelect = ({
         id={id}
         aria-required={required}
         className={cn(
-          'rounded-none border-border bg-background px-4 py-2.5 text-xs text-foreground focus:border-tulpar-blue',
+          'rounded-none border-border bg-background px-4 py-2.5 text-xs text-foreground focus:border-hesaplamalarim-blue',
           className,
         )}
       >

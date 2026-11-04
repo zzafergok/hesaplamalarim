@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import { Boxes, Home } from 'lucide-react';
 
 import { Button } from '@/components/core/button';
@@ -69,7 +69,7 @@ function ShellNav({ items }: { items: ShellNavItem[] }) {
           className="font-sans text-compact font-semibold tracking-tight text-ash hover:text-titanium"
         >
           <Link href={item.href}>
-            <item.icon className="mr-1.5 h-3.5 w-3.5 text-tulpar-blue" />
+            <item.icon className="mr-1.5 h-3.5 w-3.5 text-hesaplamalarim-blue" />
             {item.label}
           </Link>
         </Button>

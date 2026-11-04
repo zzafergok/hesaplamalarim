@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { cn } from '@/lib/utils';
@@ -41,7 +41,7 @@ export const AttachmentTitle = React.forwardRef<
         size === 'default' && 'text-sm',
         size === 'sm' && 'text-xs',
         size === 'xs' && 'text-[11px]',
-        isShimmer && 'animate-pulse text-tulpar-blue',
+        isShimmer && 'animate-pulse text-hesaplamalarim-blue',
         state === 'error' && 'text-alert-red',
         className,
       )}

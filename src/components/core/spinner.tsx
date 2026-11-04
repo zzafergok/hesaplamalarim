@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { LoaderIcon } from 'lucide-react';
@@ -32,7 +32,7 @@ const spinnerVariants = cva('', {
       '2xl': 'h-16 w-16',
     },
     variant: {
-      default: 'text-tulpar-blue',
+      default: 'text-hesaplamalarim-blue',
       secondary: 'text-ash',
       white: 'text-white',
     },
@@ -125,7 +125,7 @@ const dotColorMap: Record<
   NonNullable<LoadingSpinnerProps['variant']>,
   string
 > = {
-  default: 'bg-tulpar-blue',
+  default: 'bg-hesaplamalarim-blue',
   secondary: 'bg-gunmetal',
   white: 'bg-white shadow-lg',
 };
@@ -176,7 +176,7 @@ const pulseColorMap: Record<
   string
 > = {
   default:
-    'bg-gradient-to-br from-tulpar-blue/40 via-tulpar-blue/60 to-tulpar-blue/80',
+    'bg-gradient-to-br from-hesaplamalarim-blue/40 via-hesaplamalarim-blue/60 to-hesaplamalarim-blue/80',
   secondary:
     'bg-gradient-to-br from-gunmetal/40 via-gunmetal/60 to-gunmetal/80',
   white: 'bg-gradient-to-br from-white via-titanium/80 to-titanium',

@@ -1,5 +1,5 @@
 :root {
-  /* ── Base Semantic Tokens (Light Mode) ── */
+  /* -- Base Semantic Tokens (Light Mode) -- */
   --background: 214 33% 97.5%;
   --foreground: 222 47% 11%;
   --card: 0 0% 100%;
@@ -11,7 +11,7 @@
   --ring: 217 91% 50%;
   --radius: 0.625rem;
 
-  /* ── Primary Color System (Cobalt FinTech: 50-950) ── */
+  /* -- Primary Color System (Cobalt FinTech: 50-950) -- */
   --primary-50: 214 100% 97%;
   --primary-100: 214 95% 93%;
   --primary-200: 213 93% 85%;
@@ -26,7 +26,7 @@
   --primary: 217 91% 50%;
   --primary-foreground: 0 0% 100%;
 
-  /* ── Neutral / Slate Color System (50-950) ── */
+  /* -- Neutral / Slate Color System (50-950) -- */
   --neutral-50: 210 40% 98%;
   --neutral-100: 214 32% 95%;
   --neutral-200: 214 24% 88%;
@@ -41,7 +41,7 @@
   --neutral: 215 16% 47%;
   --neutral-foreground: 210 40% 98%;
 
-  /* ── Secondary & Muted (Light Mode) ── */
+  /* -- Secondary & Muted (Light Mode) -- */
   --secondary-50: 214 32% 96%;
   --secondary-100: 214 28% 93%;
   --secondary-200: 214 25% 88%;
@@ -73,7 +73,7 @@
   --accent: 214 28% 91%;
   --accent-foreground: 222 47% 11%;
 
-  /* ── Success Color System (Signal Green: 50-950) ── */
+  /* -- Success Color System (Signal Green: 50-950) -- */
   --success-50: 144 70% 96%;
   --success-100: 144 65% 91%;
   --success-200: 145 63% 80%;
@@ -88,7 +88,7 @@
   --success: 152 76% 32%;
   --signal-green: 152 76% 32%;
 
-  /* ── Warning Color System (Amber / Tulpar Gold: 50-950) ── */
+  /* -- Warning Color System (Amber / Hesaplamalar-m Gold: 50-950) -- */
   --warning-50: 48 100% 96%;
   --warning-100: 48 96% 89%;
   --warning-200: 48 94% 77%;
@@ -101,9 +101,9 @@
   --warning-900: 22 70% 21%;
   --warning-950: 22 78% 11%;
   --warning: 38 92% 40%;
-  --tulpar-gold: 38 92% 40%;
+  --hesaplamalarim-gold: 38 92% 40%;
 
-  /* ── Error / Destructive Color System (Alert Red: 50-950) ── */
+  /* -- Error / Destructive Color System (Alert Red: 50-950) -- */
   --error-50: 0 86% 97%;
   --error-100: 0 84% 93%;
   --error-200: 0 84% 86%;
@@ -120,7 +120,7 @@
   --destructive-foreground: 0 0% 98%;
   --alert-red: 350 84% 48%;
 
-  /* ── Info / Blue Variations (50-950) ── */
+  /* -- -nfo / Blue Variations (50-950) -- */
   --info-50: 214 100% 97%;
   --info-100: 214 95% 93%;
   --info-200: 213 93% 85%;
@@ -134,27 +134,28 @@
   --info-950: 226 67% 14%;
   --info: 217 91% 50%;
 
-  /* ── Adaptive Surface & Typography Tokens (Light Mode) ── */
+  /* -- Adaptive Surface & Typography Tokens (Light Mode) -- */
   --void-black: 214 32% 95.5%;
   --obsidian: 0 0% 100%;
   --gunmetal: 214 24% 82%;
   --titanium: 222 47% 11%;
   --ash: 215 18% 40%;
 
-  /* ── Brand & Gamification Tokens ── */
-  --tulpar-blue-50: 214 100% 97%;
-  --tulpar-blue-100: 214 95% 93%;
-  --tulpar-blue-200: 213 93% 85%;
-  --tulpar-blue-300: 213 92% 74%;
-  --tulpar-blue-400: 214 91% 62%;
-  --tulpar-blue-500: 217 91% 50%;
-  --tulpar-blue-600: 221 83% 45%;
-  --tulpar-blue-700: 224 76% 38%;
-  --tulpar-blue-800: 226 71% 30%;
-  --tulpar-blue-900: 224 64% 22%;
-  --tulpar-blue-950: 226 67% 14%;
-  --tulpar-blue: 217 91% 50%;
-  --tulpar-firuze: 174 80% 32%;
-  --tulpar-cosmic: 222 47% 12%;
+  /* -- Brand & Gamification Tokens -- */
+  --hesaplamalarim-blue-50: 214 100% 97%;
+  --hesaplamalarim-blue-100: 214 95% 93%;
+  --hesaplamalarim-blue-200: 213 93% 85%;
+  --hesaplamalarim-blue-300: 213 92% 74%;
+  --hesaplamalarim-blue-400: 214 91% 62%;
+  --hesaplamalarim-blue-500: 217 91% 50%;
+  --hesaplamalarim-blue-600: 221 83% 45%;
+  --hesaplamalarim-blue-700: 224 76% 38%;
+  --hesaplamalarim-blue-800: 226 71% 30%;
+  --hesaplamalarim-blue-900: 224 64% 22%;
+  --hesaplamalarim-blue-950: 226 67% 14%;
+  --hesaplamalarim-blue: 217 91% 50%;
+  --hesaplamalarim-firuze: 174 80% 32%;
+  --hesaplamalarim-cosmic: 222 47% 12%;
 }
+
 

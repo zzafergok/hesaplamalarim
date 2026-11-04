@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
@@ -6,12 +6,12 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 export const badgeVariants = cva(
-  'inline-flex items-center justify-center rounded-sm border font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-tulpar-blue/50 select-none [&_svg]:pointer-events-none [&_svg]:size-3 shrink-0 [&>[data-icon=inline-start]]:-ml-0.5 [&>[data-icon=inline-start]]:mr-1.5 [&>[data-icon=inline-end]]:-mr-0.5 [&>[data-icon=inline-end]]:ml-1.5 rtl:[&>[data-icon=inline-start]]:-mr-0.5 rtl:[&>[data-icon=inline-start]]:ml-1.5 rtl:[&>[data-icon=inline-end]]:-ml-0.5 rtl:[&>[data-icon=inline-end]]:mr-1.5',
+  'inline-flex items-center justify-center rounded-sm border font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-hesaplamalarim-blue/50 select-none [&_svg]:pointer-events-none [&_svg]:size-3 shrink-0 [&>[data-icon=inline-start]]:-ml-0.5 [&>[data-icon=inline-start]]:mr-1.5 [&>[data-icon=inline-end]]:-mr-0.5 [&>[data-icon=inline-end]]:ml-1.5 rtl:[&>[data-icon=inline-start]]:-mr-0.5 rtl:[&>[data-icon=inline-start]]:ml-1.5 rtl:[&>[data-icon=inline-end]]:-ml-0.5 rtl:[&>[data-icon=inline-end]]:mr-1.5',
   {
     variants: {
       variant: {
         default:
-          'border-transparent bg-tulpar-blue text-white shadow hover:bg-tulpar-blue/90',
+          'border-transparent bg-hesaplamalarim-blue text-white shadow hover:bg-hesaplamalarim-blue/90',
         secondary:
           'border-transparent bg-gunmetal text-titanium hover:bg-gunmetal/80',
         destructive:
@@ -20,7 +20,7 @@ export const badgeVariants = cva(
           'border-gunmetal/40 bg-transparent text-titanium hover:bg-gunmetal/20',
         ghost:
           'border-transparent bg-transparent text-titanium hover:bg-gunmetal/20',
-        link: 'border-transparent text-tulpar-blue underline-offset-4 hover:underline p-0 h-auto',
+        link: 'border-transparent text-hesaplamalarim-blue underline-offset-4 hover:underline p-0 h-auto',
         warning:
           'border-transparent bg-warning text-white shadow hover:bg-warning/90',
         none: 'border-transparent bg-transparent',

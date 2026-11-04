@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 
@@ -84,7 +84,7 @@ export function SkipLink({
       {...props}
       href={href}
       className={cn(
-        'sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-tulpar-blue focus:px-4 focus:py-2 focus:text-white focus:outline-none focus:ring-2 focus:ring-titanium focus:ring-offset-2 focus:ring-offset-obsidian',
+        'sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-hesaplamalarim-blue focus:px-4 focus:py-2 focus:text-white focus:outline-none focus:ring-2 focus:ring-titanium focus:ring-offset-2 focus:ring-offset-obsidian',
         className,
       )}
       data-slot="skip-link"

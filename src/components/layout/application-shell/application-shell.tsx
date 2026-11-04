@@ -84,7 +84,7 @@ function ApplicationShellContent({
         )}
       </Sidebar>
 
-      <SidebarInset className="min-h-screen bg-background text-foreground antialiased selection:bg-tulpar-blue/20 selection:text-white">
+      <SidebarInset className="min-h-screen bg-background text-foreground antialiased selection:bg-hesaplamalarim-blue/20 selection:text-white">
         <ApplicationShellHeader
           active={active}
           collapsed={collapsed}
@@ -107,7 +107,7 @@ function ApplicationShellContent({
         </div>
 
         <ApplicationShellFooter placement="content">
-          {contentFooter ?? 'Tulpar © 2026'}
+          {contentFooter ?? 'Hesaplamalarım © 2026'}
         </ApplicationShellFooter>
       </SidebarInset>
     </>

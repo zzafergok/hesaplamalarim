@@ -64,7 +64,7 @@
   :where(a):where(
     :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
   ) {
-  color: hsl(var(--tulpar-blue));
+  color: hsl(var(--hesaplamalarim-blue));
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -73,7 +73,7 @@
   :where(blockquote):where(
     :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
   ) {
-  border-inline-start: 3px solid hsl(var(--tulpar-blue) / 0.5);
+  border-inline-start: 3px solid hsl(var(--hesaplamalarim-blue) / 0.5);
   padding-inline-start: 1em;
   font-style: italic;
   color: hsl(var(--ash));

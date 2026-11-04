@@ -45,36 +45,36 @@ export function ErrorFallbackView({
     switch (fallbackLevel) {
       case 'page':
         return {
-          title: 'Sayfa YÃ¼klenemedi',
+          title: 'Sayfa Yüklenemedi',
           description:
-            'Bu sayfada beklenmeyen bir hata oluÅŸtu. Ana sayfaya dÃ¶nebilir veya sayfayÄ± yenileyebilirsiniz.',
+            'Bu sayfada beklenmeyen bir hata oluştu. Ana sayfaya dönebilir veya sayfayı yenileyebilirsiniz.',
           actions: (
             <div className="flex justify-center gap-2">
               {onGoHome ? (
                 <Button onClick={onGoHome} variant="default">
                   <Home className="mr-2 h-4 w-4" />
-                  Ana Sayfaya DÃ¶n
+                  Ana Sayfaya Dön
                 </Button>
               ) : (
                 <Button asChild variant="default">
                   <Link href="/home">
                     <Home className="mr-2 h-4 w-4" />
-                    Ana Sayfaya DÃ¶n
+                    Ana Sayfaya Dön
                   </Link>
                 </Button>
               )}
               <Button onClick={handleRefresh} variant="outline">
                 <RefreshCw className="mr-2 h-4 w-4" />
-                SayfayÄ± Yenile
+                Sayfayı Yenile
               </Button>
             </div>
           ),
         };
       case 'section':
         return {
-          title: 'BÃ¶lÃ¼m YÃ¼klenemedi',
+          title: 'Bölüm Yüklenemedi',
           description:
-            'Bu bÃ¶lÃ¼mde bir hata oluÅŸtu. SayfayÄ± yenileyerek tekrar deneyebilirsiniz.',
+            'Bu bölümde bir hata oluştu. Sayfayı yenileyerek tekrar deneyebilirsiniz.',
           actions:
             enableRetry && retryCount < maxRetries ? (
               <Button onClick={onRetry} variant="outline" size="sm">
@@ -84,14 +84,14 @@ export function ErrorFallbackView({
             ) : (
               <Button onClick={handleRefresh} variant="outline" size="sm">
                 <RefreshCw className="mr-2 h-4 w-4" />
-                SayfayÄ± Yenile
+                Sayfayı Yenile
               </Button>
             ),
         };
       default:
         return {
-          title: 'BileÅŸen HatasÄ±',
-          description: 'Bu bileÅŸende beklenmeyen bir hata oluÅŸtu.',
+          title: 'Bileşen Hatası',
+          description: 'Bu bileşende beklenmeyen bir hata oluştu.',
           actions:
             enableRetry && retryCount < maxRetries ? (
               <Button onClick={onRetry} variant="ghost" size="sm">
@@ -142,16 +142,17 @@ export function ErrorFallbackView({
           <p className="text-xs text-ash/70">
             Sorun devam ederse{' '}
             <a
-              href="mailto:support@tulpar.dev"
-              className="inline-flex items-center text-tulpar-blue underline hover:text-tulpar-blue/80 hover:no-underline"
+              href="mailto:support@hesaplamalarim.dev"
+              className="inline-flex items-center text-hesaplamalarim-blue underline hover:text-hesaplamalarim-blue/80 hover:no-underline"
             >
               <Mail className="mr-1 inline h-3 w-3" />
-              support@tulpar.dev
+              support@hesaplamalarim.dev
             </a>{' '}
-            adresinden iletiÅŸime geÃ§in.
+            adresinden iletişime geçin.
           </p>
         </div>
       </CardContent>
     </Card>
   );
 }
+

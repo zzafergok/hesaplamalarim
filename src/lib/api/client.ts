@@ -53,7 +53,7 @@ class ApiClient {
             ? String((errorData as { message: unknown }).message)
             : response.statusText || 'Bir hata oluştu';
 
-        throw new ApiError(message, response.status, errorData);
+        throw new ApiError(response.status, response.statusText, errorData, message);
       }
       return response;
     });
@@ -120,16 +120,25 @@ class ApiClient {
       );
 
       const signal = finalConfig.signal || controller.signal;
+      const { params: _params, skipAuth: _skipAuth, timeout: _timeout, body, ...fetchInit } = finalConfig;
+
+      const preparedBody: BodyInit | null | undefined =
+        body === undefined || body === null
+          ? null
+          : typeof body === 'string' || body instanceof FormData || body instanceof Blob
+            ? (body as BodyInit)
+            : JSON.stringify(body);
 
       let response = await fetch(url, {
-        ...finalConfig,
+        ...fetchInit,
+        body: preparedBody,
         signal,
       });
 
       clearTimeout(timeoutId);
 
       for (const interceptor of this.responseInterceptors) {
-        response = await interceptor(response);
+        response = await interceptor(response, finalConfig);
       }
 
       if (response.status === 204) {
@@ -142,11 +151,11 @@ class ApiClient {
         error instanceof Error ? error : new Error(String(error));
 
       if (finalError.name === 'AbortError') {
-        finalError = new ApiError('İstek zaman aşımına uğradı', 408);
+        finalError = new ApiError(408, 'Request Timeout', null, 'İstek zaman aşımına uğradı');
       }
 
       for (const interceptor of this.errorInterceptors) {
-        finalError = await interceptor(finalError);
+        await interceptor(finalError);
       }
 
       throw finalError;

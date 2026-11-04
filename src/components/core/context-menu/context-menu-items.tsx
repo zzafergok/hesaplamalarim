@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { CheckIcon, CircleIcon } from 'lucide-react';
@@ -56,7 +56,7 @@ export function ContextMenuCheckboxItem({
       checked={checked}
       {...props}
     >
-      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-tulpar-blue">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-hesaplamalarim-blue">
         <ContextMenuPrimitive.ItemIndicator>
           <CheckIcon className="size-4" />
         </ContextMenuPrimitive.ItemIndicator>
@@ -84,7 +84,7 @@ export function ContextMenuRadioItem({
       )}
       {...props}
     >
-      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-tulpar-blue">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center text-hesaplamalarim-blue">
         <ContextMenuPrimitive.ItemIndicator>
           <CircleIcon className="size-2 fill-current" />
         </ContextMenuPrimitive.ItemIndicator>

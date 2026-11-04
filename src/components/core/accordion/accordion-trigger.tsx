@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Accordion as AccordionPrimitive } from 'radix-ui';
@@ -17,7 +17,7 @@ export const AccordionTrigger = React.forwardRef<
       className={cn(
         'flex flex-1 items-center justify-between py-4 text-left text-sm font-medium outline-none transition-all',
         'text-titanium hover:text-white hover:underline',
-        'rounded-sm focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-tulpar-blue/50',
+        'rounded-sm focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-hesaplamalarim-blue/50',
         'disabled:pointer-events-none disabled:opacity-50',
         '[&[data-state=open]>svg]:rotate-180',
         className,

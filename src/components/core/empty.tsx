@@ -1,4 +1,4 @@
-import * as React from 'react';
+﻿import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
@@ -85,7 +85,7 @@ export function EmptyDescription({
     <div
       data-slot="empty-description"
       className={cn(
-        'text-sm/relaxed text-ash [&>a:hover]:text-tulpar-blue [&>a]:underline [&>a]:underline-offset-4',
+        'text-sm/relaxed text-ash [&>a:hover]:text-hesaplamalarim-blue [&>a]:underline [&>a]:underline-offset-4',
         className,
       )}
       {...props}

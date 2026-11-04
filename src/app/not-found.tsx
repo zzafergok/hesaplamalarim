@@ -1,4 +1,4 @@
-import { ArrowLeft, Compass, Home } from 'lucide-react';
+﻿import { ArrowLeft, Compass, Home } from 'lucide-react';
 import { Button } from '@/components/core/button';
 import {
   Card,
@@ -30,10 +30,10 @@ export default async function NotFound() {
       <div className="flex min-h-[calc(100vh-8rem)] items-center justify-center px-4 py-16">
         <Card className="w-full max-w-lg border-gunmetal bg-obsidian text-center shadow-2xl">
           <CardHeader className="space-y-4 pb-2">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-sm border border-tulpar-blue/40 bg-tulpar-blue/10 text-tulpar-blue">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-sm border border-hesaplamalarim-blue/40 bg-hesaplamalarim-blue/10 text-hesaplamalarim-blue">
               <Compass className="h-7 w-7 animate-pulse" />
             </div>
-            <div className="inline-block font-mono text-xs font-bold uppercase tracking-widest text-tulpar-blue">
+            <div className="inline-block font-mono text-xs font-bold uppercase tracking-widest text-hesaplamalarim-blue">
               {copy.badge}
             </div>
             <CardTitle className="text-2xl font-black uppercase tracking-tight text-titanium sm:text-3xl">
@@ -47,7 +47,7 @@ export default async function NotFound() {
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Button
                 asChild
-                className="h-10 rounded-none bg-tulpar-blue font-bold uppercase tracking-wider text-white hover:bg-tulpar-blue/90"
+                className="h-10 rounded-none bg-hesaplamalarim-blue font-bold uppercase tracking-wider text-white hover:bg-hesaplamalarim-blue/90"
               >
                 <Link href="/">
                   <Home className="mr-2 h-4 w-4" />

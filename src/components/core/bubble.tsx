@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
@@ -31,17 +31,17 @@ function useBubbleContext() {
 }
 
 export const bubbleContentVariants = cva(
-  'relative inline-block break-words leading-relaxed text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-tulpar-blue/50',
+  'relative inline-block break-words leading-relaxed text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-hesaplamalarim-blue/50',
   {
     variants: {
       variant: {
-        default: 'bg-tulpar-blue text-white rounded-sm px-3.5 py-2 shadow-sm',
+        default: 'bg-hesaplamalarim-blue text-white rounded-sm px-3.5 py-2 shadow-sm',
         secondary:
           'bg-obsidian/80 border border-gunmetal/40 text-titanium rounded-sm px-3.5 py-2 shadow-xs',
         muted:
           'bg-gunmetal/30 border border-gunmetal/20 text-ash rounded-sm px-3.5 py-2',
         tinted:
-          'bg-tulpar-blue/10 border border-tulpar-blue/20 text-tulpar-blue rounded-sm px-3.5 py-2',
+          'bg-hesaplamalarim-blue/10 border border-hesaplamalarim-blue/20 text-hesaplamalarim-blue rounded-sm px-3.5 py-2',
         outline:
           'bg-transparent border border-gunmetal/50 text-titanium rounded-sm px-3.5 py-2',
         ghost: 'bg-transparent text-titanium px-0 py-1',

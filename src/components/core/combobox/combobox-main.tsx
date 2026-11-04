@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import * as React from 'react';
 import { Combobox as ComboboxPrimitive } from '@base-ui/react';
@@ -129,7 +129,7 @@ export function ComboboxItem({
       <ComboboxPrimitive.ItemIndicator
         data-slot="combobox-item-indicator"
         render={
-          <span className="pointer-events-none absolute right-2 flex size-4 items-center justify-center text-tulpar-blue" />
+          <span className="pointer-events-none absolute right-2 flex size-4 items-center justify-center text-hesaplamalarim-blue" />
         }
       >
         <CheckIcon className="pointer-coarse:size-5 pointer-events-none size-4" />
