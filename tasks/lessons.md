@@ -47,3 +47,8 @@ Bu dosya, kullanıcı geri bildirimleri, mimari denetimler ve geliştirme sürec
 ## 9. Next.js 16 (Turbopack) & CSS İçe Aktarımları
 
 - **CSS İçi @import Yasağı:** Next.js 16 App Router ve Turbopack derleyicisinde CSS dosyaları içinde @import './other.css' kullanılması Unexpected token AtKeyword("import") derleme hatasına yol açar. Modüler CSS ve tema token dosyaları (	ypeset.css, 	okens-light.css, 	okens-dark.css, globals.css) doğrudan kök layout.tsx dosyası üzerinden sırasıyla import edilmelidir.
+
+
+## 10. RSC & Client Component Veri Serileştirme (Plain Object Kuralı)
+
+- **Fonksiyon ve İkon Nesnesi Taşıma Yasağı:** Server Component'lerden Client Component'lere prop olarak veri aktarılırken yalnızca plain JSON objeleri (string, number, boolean, array, plain object) aktarılabilir. LucideIcon, React elementleri veya metot içeren objeler doğrudan prop olarak geçildiğinde `Only plain objects can be passed to Client Components from Server Components` hatası oluşur. İkonlar ve fonksiyonel yapılar daima Client Component seviyesinde ID/string anahtar üzerinden çözümlenmelidir.

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -77,14 +77,7 @@ export function CalculatorDetailScreen({
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
           <Link
-            href="/hesaplamalar"
-            className="transition-colors hover:text-titanium"
-          >
-            Hesaplamalar
-          </Link>
-          <ChevronRight className="h-3.5 w-3.5" />
-          <Link
-            href={`/hesaplamalar/${categoryMeta.id}`}
+            href={`/${categoryMeta.id}`}
             className="transition-colors hover:text-titanium"
           >
             {categoryMeta.shortTitle}
@@ -112,9 +105,9 @@ export function CalculatorDetailScreen({
             variant="ghost"
             className="font-sans text-compact font-semibold"
           >
-            <Link href="/hesaplamalar">
+            <Link href={`/${categoryMeta.id}`}>
               <ArrowLeft className="mr-1.5 h-3.5 w-3.5" />
-              Tüm Araçlar
+              {categoryMeta.shortTitle}
             </Link>
           </Button>
         </div>
@@ -143,7 +136,7 @@ export function CalculatorDetailScreen({
             size="sm"
             className="font-sans text-compact font-semibold"
           >
-            <Link href={`/hesaplamalar/${categoryMeta.id}`}>
+            <Link href={`/${categoryMeta.id}`}>
               Kategoriyi Gör
             </Link>
           </Button>
@@ -159,7 +152,7 @@ export function CalculatorDetailScreen({
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               >
                 <Link
-                  href={`/hesaplamalar/${item.categoryId}/${item.id}`}
+                  href={`/${item.categoryId}/${item.id}`}
                   className="block h-full"
                 >
                   <Card className="h-full border-gunmetal/70 bg-obsidian/90 transition-colors hover:border-hesaplamalarim-blue/55">

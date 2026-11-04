@@ -8,11 +8,6 @@
       "href": "/",
       "label": "Ana Sayfa",
       "icon": "home"
-    },
-    {
-      "href": "/hesaplamalar",
-      "label": "Tüm Hesaplamalar",
-      "icon": "boxes"
     }
   ],
   "preferenceControls": {

@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categoryEntries: MetadataRoute.Sitemap = CALCULATOR_CATEGORIES.map(
     (cat) => ({
-      url: new URL(`/hesaplamalar/${cat.id}`, siteMetadata.url).toString(),
+      url: new URL(`/${cat.id}`, siteMetadata.url).toString(),
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.85,
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const calculatorEntries: MetadataRoute.Sitemap = ALL_CALCULATORS.map(
     (calc) => ({
       url: new URL(
-        `/hesaplamalar/${calc.categoryId}/${calc.id}`,
+        `/${calc.categoryId}/${calc.id}`,
         siteMetadata.url,
       ).toString(),
       lastModified: now,

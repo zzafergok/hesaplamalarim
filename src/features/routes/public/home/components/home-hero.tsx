@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowDown, Calculator, Sparkles, Trophy } from 'lucide-react';
@@ -95,9 +95,9 @@ export function HomeHero({
             variant="outline"
             className="font-sans text-body-sm font-semibold"
           >
-            <Link href="/hesaplamalar">
+            <Link href="/finans">
               <Trophy className="mr-2 h-4 w-4 text-hesaplamalarim-gold" />
-              33 Özel Hesaplama Sayfasını Keşfet
+              Finans ve 33 Özel Hesaplama Sayfasını Keşfet
             </Link>
           </Button>
         </div>

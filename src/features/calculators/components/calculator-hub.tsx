@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -107,7 +107,7 @@ export function CalculatorHub() {
               {filteredCalculators.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/hesaplamalar/${item.categoryId}/${item.id}`}
+                  href={`/${item.categoryId}/${item.id}`}
                   onClick={() => setSearchQuery('')}
                   className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left font-sans text-caption text-titanium transition-colors hover:bg-void-black"
                 >
@@ -165,7 +165,7 @@ export function CalculatorHub() {
                     size="sm"
                     className="font-sans text-compact font-semibold"
                   >
-                    <Link href={`/hesaplamalar/${cat.id}`}>
+                    <Link href={`/${cat.id}`}>
                       Kategori Sayfasını Aç
                       <ArrowUpRight className="ml-1 h-3.5 w-3.5" />
                     </Link>
@@ -226,7 +226,7 @@ export function CalculatorHub() {
                               className="shrink-0 border-gunmetal/80 px-2.5 font-sans text-micro font-semibold"
                             >
                               <Link
-                                href={`/hesaplamalar/${tool.categoryId}/${tool.id}`}
+                                href={`/${tool.categoryId}/${tool.id}`}
                               >
                                 Sayfa
                                 <ArrowUpRight className="ml-1 h-3 w-3" />

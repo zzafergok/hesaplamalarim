@@ -1,12 +1,7 @@
 {
   "publicHome": {
     "title": "Hesaplamalarım | Online Finance, Severance & Payroll Tools",
-    "description": "Severance pay, notice indemnity, and gross-to-net salary calculators compliant with current 2026 regulations.",
-    "aiPurpose": "Home page providing live and instant access to severance, indemnity, and payroll calculators."
-  },
-  "hesaplamalar": {
-    "title": "All Calculator Tools | Severance, Indemnity & Payroll",
-    "description": "Calculators for severance pay, notice indemnity, and salary calculations under Labor Law No. 4857 and 2026 legal framework.",
-    "aiPurpose": "Dedicated calculator hub featuring all finance and payroll tools."
+    "description": "Severance pay, notice indemnity, and gross-to-net salary calculator tools compliant with up-to-date 2026 regulations.",
+    "aiPurpose": "Public home page providing fast and live access to calculations."
   }
 }

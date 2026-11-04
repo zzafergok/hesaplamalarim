@@ -1,24 +1,19 @@
 {
   "brand": {
     "title": "Hesaplamalarım",
-    "subtitle": "Finance & Payroll Calculators"
+    "subtitle": "Finance, Severance & Salary Tools"
   },
   "publicNav": [
     {
       "href": "/",
       "label": "Home",
       "icon": "home"
-    },
-    {
-      "href": "/hesaplamalar",
-      "label": "All Calculators",
-      "icon": "boxes"
     }
   ],
   "preferenceControls": {
     "themeLight": "Light Theme",
     "themeDark": "Dark Theme",
-    "themeError": "Error updating theme",
-    "languageError": "Error switching language"
+    "themeError": "Failed to update theme",
+    "languageError": "Failed to change language"
   }
 }

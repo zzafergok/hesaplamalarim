@@ -7,7 +7,7 @@ export type RouteRobots = {
 
 export type RouteSection = 'public' | 'admin' | 'auth';
 
-export type MetadataRouteId = 'publicHome' | 'hesaplamalar';
+export type MetadataRouteId = 'publicHome';
 
 export type LocalizedRouteMetadata = {
   title: string;

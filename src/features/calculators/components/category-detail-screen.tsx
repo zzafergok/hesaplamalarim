@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -55,13 +55,6 @@ export function CategoryDetailScreen({
             Ana Sayfa
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <Link
-            href="/hesaplamalar"
-            className="transition-colors hover:text-titanium"
-          >
-            Hesaplamalar
-          </Link>
-          <ChevronRight className="h-3.5 w-3.5" />
           <span className="font-bold italic text-hesaplamalarim-blue">
             {category.shortTitle}
           </span>
@@ -73,9 +66,9 @@ export function CategoryDetailScreen({
           variant="outline"
           className="font-sans text-compact font-semibold"
         >
-          <Link href="/hesaplamalar">
+          <Link href="/">
             <ArrowLeft className="mr-1.5 h-3.5 w-3.5" />
-            Tüm Kategoriler
+            Ana Sayfa
           </Link>
         </Button>
       </div>
@@ -116,7 +109,7 @@ export function CategoryDetailScreen({
               whileHover={{ y: -5, scale: 1.01 }}
             >
               <Link
-                href={`/hesaplamalar/${tool.categoryId}/${tool.id}`}
+                href={`/${tool.categoryId}/${tool.id}`}
                 className="block h-full"
               >
                 <Card className="relative h-full overflow-hidden border-gunmetal/70 bg-obsidian/95 transition-all hover:border-hesaplamalarim-blue/60 hover:shadow-lg">
@@ -183,7 +176,7 @@ export function CategoryDetailScreen({
             size="sm"
             className="font-sans text-compact font-semibold"
           >
-            <Link href={`/hesaplamalar/${cat.id}`}>{cat.shortTitle}</Link>
+            <Link href={`/${cat.id}`}>{cat.shortTitle}</Link>
           </Button>
         ))}
       </div>

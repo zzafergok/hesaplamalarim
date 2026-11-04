@@ -127,7 +127,7 @@ export function DynamicCalculatorCard({
                     className="font-sans text-micro font-semibold"
                   >
                     <Link
-                      href={`/hesaplamalar/${calculator.categoryId}/${calculator.id}`}
+                      href={`/${calculator.categoryId}/${calculator.id}`}
                     >
                       Özel Sayfa
                       <ExternalLink className="ml-1.5 h-3 w-3" />

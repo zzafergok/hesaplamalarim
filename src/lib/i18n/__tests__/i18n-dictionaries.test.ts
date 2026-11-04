@@ -34,10 +34,7 @@ describe('i18n JSON Dictionaries & Copy Loaders', () => {
 
   it('contains consistent route metadata for indexable routes', () => {
     expect(routeMetadata.publicHome.path).toBe('/');
-    expect(routeMetadata.hesaplamalar.path).toBe('/hesaplamalar');
     expect(trRouteMetadata.publicHome.title).toBeTruthy();
     expect(enRouteMetadata.publicHome.title).toBeTruthy();
-    expect(trRouteMetadata.hesaplamalar.title).toBeTruthy();
-    expect(enRouteMetadata.hesaplamalar.title).toBeTruthy();
   });
 });

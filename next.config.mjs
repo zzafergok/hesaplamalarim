@@ -48,7 +48,7 @@ const securityHeaders = [
 
 const nextConfig = {
   reactStrictMode: true,
-  poweredByHeader: false, // Security hardening: hide Next.js powered-by header
+  poweredByHeader: false,
   devIndicators: false,
   images: {
     remotePatterns: [
