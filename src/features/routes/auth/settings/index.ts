@@ -1,1 +1,0 @@
-export { AuthSettingsScreen } from './screen';

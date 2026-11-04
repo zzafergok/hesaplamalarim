@@ -1,1 +1,0 @@
-export { AdminSettingsScreen } from './screen';

@@ -1,1 +1,0 @@
-export { AuthHomeScreen } from './screen';

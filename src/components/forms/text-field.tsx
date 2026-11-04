@@ -70,7 +70,7 @@ export function TextField({
       <Label
         htmlFor={name}
         className={cn(
-          'font-mono text-2xs uppercase tracking-wider text-ash',
+          'font-sans text-compact font-semibold tracking-tight text-titanium',
           hideLabel && 'sr-only',
         )}
       >
@@ -81,7 +81,7 @@ export function TextField({
         type={type}
         min={min}
         max={max}
-        step={step}
+        step={step ?? (type === 'number' ? 'any' : undefined)}
         placeholder={placeholder}
         disabled={isDisabled}
         autoComplete={autoComplete}
@@ -92,13 +92,20 @@ export function TextField({
         {...register(name, {
           valueAsNumber: type === 'number',
         })}
-        className={cn('text-xs', inputClassName)}
+        className={cn(
+          type === 'number'
+            ? 'font-mono text-body-sm font-semibold tabular-nums text-titanium'
+            : 'font-sans text-body-sm font-normal text-titanium',
+          inputClassName,
+        )}
       />
       {description && !error && (
-        <p className="font-mono text-2xs text-ash/60">{description}</p>
+        <p className="font-sans text-2xs font-normal italic text-ash">
+          {description}
+        </p>
       )}
       {error && (
-        <p className="flex items-center gap-1 font-mono text-2xs text-alert-red">
+        <p className="flex items-center gap-1 font-sans text-2xs font-medium italic text-alert-red">
           <AlertCircle className="h-3 w-3" />
           {error.message}
         </p>

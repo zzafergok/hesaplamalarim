@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 import { routing } from '@/i18n/routing';
-import { hasAdminSession, hasUserSession } from '@/lib/auth/session';
 
-const AUTH_ENTRY = '/home';
-const ADMIN_ENTRY = '/admin';
-const ADMIN_LOGIN = '/admin/login';
 const LOCALE_HEADER = 'X-NEXT-INTL-LOCALE';
 
 function applySecurityHeaders(response: NextResponse): NextResponse {
@@ -35,11 +31,6 @@ function withLocaleHeader(request: NextRequest): NextResponse {
   return applySecurityHeaders(response);
 }
 
-function redirectWithSecurity(url: URL): NextResponse {
-  const response = NextResponse.redirect(url);
-  return applySecurityHeaders(response);
-}
-
 function isStaticAsset(pathname: string): boolean {
   return (
     pathname.startsWith('/_next') ||
@@ -59,45 +50,7 @@ export function proxy(request: NextRequest) {
     return applySecurityHeaders(response);
   }
 
-  const hasSession = hasUserSession(request);
-  const hasAdmin = hasAdminSession(request);
-  const isAdminLogin = pathname === ADMIN_LOGIN;
-  const isAdminRoute =
-    pathname === ADMIN_ENTRY || pathname.startsWith(`${ADMIN_ENTRY}/`);
-
-  if (isAdminLogin) {
-    if (hasAdmin) {
-      return redirectWithSecurity(new URL(ADMIN_ENTRY, request.url));
-    }
-    return withLocaleHeader(request);
-  }
-
-  if (isAdminRoute) {
-    if (!hasAdmin) {
-      return redirectWithSecurity(new URL(ADMIN_LOGIN, request.url));
-    }
-    return withLocaleHeader(request);
-  }
-
-  if (pathname === '/login') {
-    if (hasSession) {
-      return redirectWithSecurity(new URL(AUTH_ENTRY, request.url));
-    }
-    return withLocaleHeader(request);
-  }
-
-  if (
-    pathname === '/' ||
-    pathname === '/culture' ||
-    pathname.startsWith('/culture/')
-  ) {
-    return withLocaleHeader(request);
-  }
-
-  if (!hasSession) {
-    return redirectWithSecurity(new URL('/', request.url));
-  }
-
+  // Hesaplamalar platformunda tüm rotalar herkese açıktır
   return withLocaleHeader(request);
 }
 

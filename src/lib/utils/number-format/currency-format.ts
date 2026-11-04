@@ -3,8 +3,23 @@ import type { FormatCurrencyOptions } from './types';
 
 export function formatCurrency(
   value: number,
-  options: FormatCurrencyOptions = {},
+  options?: FormatCurrencyOptions,
+): string;
+export function formatCurrency(
+  value: number,
+  currency?: string,
+  locale?: string,
+): string;
+export function formatCurrency(
+  value: number,
+  currencyOrOptions?: string | FormatCurrencyOptions,
+  maybeLocale?: string,
 ): string {
+  const options: FormatCurrencyOptions =
+    typeof currencyOrOptions === 'string'
+      ? { currency: currencyOrOptions, locale: maybeLocale }
+      : (currencyOrOptions ?? {});
+
   const {
     decimals = 2,
     currency = 'TRY',

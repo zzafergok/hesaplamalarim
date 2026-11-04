@@ -14,11 +14,11 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
       data-slot="card"
       data-size={size}
       className={cn(
-        'group/card flex select-none flex-col rounded-sm border border-gunmetal/30 bg-obsidian/60 text-titanium shadow-sm',
+        'group/card flex select-none flex-col rounded-xl border border-gunmetal/60 bg-obsidian/90 text-titanium shadow-sm',
         '[--card-spacing:1.5rem] data-[size=sm]:[--card-spacing:1rem]',
         'gap-[var(--card-spacing)] py-[var(--card-spacing)]',
         'has-[[data-slot=card-footer]]:pb-0',
-        '*:[img:first-child]:rounded-t-sm *:[img:last-child]:rounded-b-sm has-[>img:first-child]:pt-0',
+        '*:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl has-[>img:first-child]:pt-0',
         className,
       )}
       {...props}
@@ -53,7 +53,7 @@ export const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
       ref={ref}
       data-slot="card-title"
       className={cn(
-        'col-start-1 text-lg font-semibold leading-tight tracking-tight text-titanium',
+        'col-start-1 font-display text-heading-sm font-bold leading-snug tracking-tight text-titanium',
         className,
       )}
       {...props}
@@ -71,7 +71,10 @@ export const CardDescription = React.forwardRef<
   <p
     ref={ref}
     data-slot="card-description"
-    className={cn('col-start-1 text-sm leading-relaxed text-ash', className)}
+    className={cn(
+      'col-start-1 font-sans text-caption font-normal leading-relaxed text-ash',
+      className,
+    )}
     {...props}
   />
 ));

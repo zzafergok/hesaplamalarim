@@ -1,0 +1,160 @@
+:root {
+  /* ── Base Semantic Tokens (Light Mode) ── */
+  --background: 214 33% 97.5%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --border: 214 24% 83%;
+  --input: 214 28% 95%;
+  --ring: 217 91% 50%;
+  --radius: 0.625rem;
+
+  /* ── Primary Color System (Cobalt FinTech: 50-950) ── */
+  --primary-50: 214 100% 97%;
+  --primary-100: 214 95% 93%;
+  --primary-200: 213 93% 85%;
+  --primary-300: 213 92% 74%;
+  --primary-400: 214 91% 62%;
+  --primary-500: 217 91% 50%;
+  --primary-600: 221 83% 45%;
+  --primary-700: 224 76% 38%;
+  --primary-800: 226 71% 30%;
+  --primary-900: 224 64% 22%;
+  --primary-950: 226 67% 14%;
+  --primary: 217 91% 50%;
+  --primary-foreground: 0 0% 100%;
+
+  /* ── Neutral / Slate Color System (50-950) ── */
+  --neutral-50: 210 40% 98%;
+  --neutral-100: 214 32% 95%;
+  --neutral-200: 214 24% 88%;
+  --neutral-300: 213 20% 78%;
+  --neutral-400: 215 16% 62%;
+  --neutral-500: 215 16% 47%;
+  --neutral-600: 215 19% 35%;
+  --neutral-700: 215 25% 27%;
+  --neutral-800: 217 33% 18%;
+  --neutral-900: 222 47% 11%;
+  --neutral-950: 222 47% 6%;
+  --neutral: 215 16% 47%;
+  --neutral-foreground: 210 40% 98%;
+
+  /* ── Secondary & Muted (Light Mode) ── */
+  --secondary-50: 214 32% 96%;
+  --secondary-100: 214 28% 93%;
+  --secondary-200: 214 25% 88%;
+  --secondary-300: 214 22% 80%;
+  --secondary-400: 214 20% 68%;
+  --secondary-500: 214 25% 91%;
+  --secondary-600: 215 18% 45%;
+  --secondary-700: 215 22% 34%;
+  --secondary-800: 217 28% 22%;
+  --secondary-900: 222 40% 14%;
+  --secondary-950: 222 45% 8%;
+  --secondary: 214 25% 91%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted-50: 214 32% 96%;
+  --muted-100: 214 28% 94%;
+  --muted-200: 214 25% 90%;
+  --muted-300: 214 22% 82%;
+  --muted-400: 214 20% 68%;
+  --muted-500: 214 25% 92%;
+  --muted-600: 215 18% 45%;
+  --muted-700: 215 18% 38%;
+  --muted-800: 217 25% 24%;
+  --muted-900: 222 40% 14%;
+  --muted-950: 222 45% 8%;
+  --muted: 214 25% 92%;
+  --muted-foreground: 215 18% 38%;
+
+  --accent: 214 28% 91%;
+  --accent-foreground: 222 47% 11%;
+
+  /* ── Success Color System (Signal Green: 50-950) ── */
+  --success-50: 144 70% 96%;
+  --success-100: 144 65% 91%;
+  --success-200: 145 63% 80%;
+  --success-300: 146 62% 67%;
+  --success-400: 148 60% 50%;
+  --success-500: 152 76% 36%;
+  --success-600: 153 77% 30%;
+  --success-700: 154 75% 24%;
+  --success-800: 155 70% 19%;
+  --success-900: 156 65% 15%;
+  --success-950: 158 70% 8%;
+  --success: 152 76% 32%;
+  --signal-green: 152 76% 32%;
+
+  /* ── Warning Color System (Amber / Tulpar Gold: 50-950) ── */
+  --warning-50: 48 100% 96%;
+  --warning-100: 48 96% 89%;
+  --warning-200: 48 94% 77%;
+  --warning-300: 45 93% 64%;
+  --warning-400: 40 92% 51%;
+  --warning-500: 38 92% 44%;
+  --warning-600: 34 93% 38%;
+  --warning-700: 28 85% 32%;
+  --warning-800: 24 75% 26%;
+  --warning-900: 22 70% 21%;
+  --warning-950: 22 78% 11%;
+  --warning: 38 92% 40%;
+  --tulpar-gold: 38 92% 40%;
+
+  /* ── Error / Destructive Color System (Alert Red: 50-950) ── */
+  --error-50: 0 86% 97%;
+  --error-100: 0 84% 93%;
+  --error-200: 0 84% 86%;
+  --error-300: 0 82% 76%;
+  --error-400: 355 80% 64%;
+  --error-500: 350 84% 50%;
+  --error-600: 348 83% 43%;
+  --error-700: 346 80% 36%;
+  --error-800: 345 76% 29%;
+  --error-900: 345 70% 23%;
+  --error-950: 345 75% 13%;
+  --error: 350 84% 48%;
+  --destructive: 350 84% 48%;
+  --destructive-foreground: 0 0% 98%;
+  --alert-red: 350 84% 48%;
+
+  /* ── Info / Blue Variations (50-950) ── */
+  --info-50: 214 100% 97%;
+  --info-100: 214 95% 93%;
+  --info-200: 213 93% 85%;
+  --info-300: 213 92% 74%;
+  --info-400: 214 91% 62%;
+  --info-500: 217 91% 50%;
+  --info-600: 221 83% 45%;
+  --info-700: 224 76% 38%;
+  --info-800: 226 71% 30%;
+  --info-900: 224 64% 22%;
+  --info-950: 226 67% 14%;
+  --info: 217 91% 50%;
+
+  /* ── Adaptive Surface & Typography Tokens (Light Mode) ── */
+  --void-black: 214 32% 95.5%;
+  --obsidian: 0 0% 100%;
+  --gunmetal: 214 24% 82%;
+  --titanium: 222 47% 11%;
+  --ash: 215 18% 40%;
+
+  /* ── Brand & Gamification Tokens ── */
+  --tulpar-blue-50: 214 100% 97%;
+  --tulpar-blue-100: 214 95% 93%;
+  --tulpar-blue-200: 213 93% 85%;
+  --tulpar-blue-300: 213 92% 74%;
+  --tulpar-blue-400: 214 91% 62%;
+  --tulpar-blue-500: 217 91% 50%;
+  --tulpar-blue-600: 221 83% 45%;
+  --tulpar-blue-700: 224 76% 38%;
+  --tulpar-blue-800: 226 71% 30%;
+  --tulpar-blue-900: 224 64% 22%;
+  --tulpar-blue-950: 226 67% 14%;
+  --tulpar-blue: 217 91% 50%;
+  --tulpar-firuze: 174 80% 32%;
+  --tulpar-cosmic: 222 47% 12%;
+}
+

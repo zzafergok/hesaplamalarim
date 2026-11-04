@@ -42,7 +42,7 @@ export function SelectField({
   required = false,
   allowNone = false,
   noneLabel = 'None',
-  placeholder = 'Select...',
+  placeholder = 'Seçiniz...',
 }: SelectFieldProps) {
   const {
     control,
@@ -62,7 +62,7 @@ export function SelectField({
     <div className={cn('space-y-1.5 sm:space-y-2', className)}>
       <Label
         htmlFor={name}
-        className="font-mono text-2xs uppercase tracking-wider text-ash"
+        className="font-sans text-compact font-semibold tracking-tight text-titanium"
       >
         {label} {required && <span className="text-tulpar-blue">*</span>}
       </Label>
@@ -90,13 +90,16 @@ export function SelectField({
             >
               <SelectTrigger
                 id={name}
-                className={cn('text-xs', error && 'border-alert-red/50')}
+                className={cn(
+                  'font-sans text-body-sm font-medium text-titanium',
+                  error && 'border-alert-red/60',
+                )}
               >
                 <div className="flex min-w-0 items-center gap-2">
                   {selectedOption?.swatchColor && (
                     <span
                       aria-hidden="true"
-                      className="h-4 w-7 shrink-0 rounded-none border border-white/30"
+                      className="h-4 w-7 shrink-0 rounded-none border border-gunmetal"
                       style={{ backgroundColor: selectedOption.swatchColor }}
                     />
                   )}
@@ -107,7 +110,7 @@ export function SelectField({
               </SelectTrigger>
               <SelectContent>
                 {allowNone && (
-                  <SelectItem value="none" className="text-xs">
+                  <SelectItem value="none" className="font-sans text-caption">
                     {noneLabel}
                   </SelectItem>
                 )}
@@ -116,13 +119,13 @@ export function SelectField({
                     key={option.value}
                     value={option.value}
                     disabled={option.disabled}
-                    className="text-xs"
+                    className="font-sans text-caption"
                   >
                     <span className="flex min-w-0 items-center gap-2">
                       {option.swatchColor && (
                         <span
                           aria-hidden="true"
-                          className="h-4 w-7 shrink-0 rounded-none border border-white/30"
+                          className="h-4 w-7 shrink-0 rounded-none border border-gunmetal"
                           style={{ backgroundColor: option.swatchColor }}
                         />
                       )}
@@ -136,10 +139,12 @@ export function SelectField({
         }}
       />
       {description && !error && (
-        <p className="font-mono text-2xs text-ash/60">{description}</p>
+        <p className="font-sans text-2xs font-normal italic text-ash">
+          {description}
+        </p>
       )}
       {error && (
-        <p className="flex items-center gap-1 font-mono text-2xs text-alert-red">
+        <p className="flex items-center gap-1 font-sans text-2xs font-medium italic text-alert-red">
           <AlertCircle className="h-3 w-3" />
           {error.message}
         </p>

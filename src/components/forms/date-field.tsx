@@ -82,7 +82,7 @@ export function DateField({
     <div className={cn('space-y-1.5 sm:space-y-2', className)}>
       <Label
         htmlFor={name}
-        className="font-mono text-2xs uppercase tracking-wider text-ash"
+        className="font-sans text-compact font-semibold tracking-tight text-titanium"
       >
         {label} {required && <span className="text-tulpar-blue">*</span>}
       </Label>
@@ -113,15 +113,17 @@ export function DateField({
             includeTime={includeTime}
             locale={locale}
             error={errorMessage !== null}
-            className="text-xs sm:text-sm"
+            className="font-mono text-body-sm font-medium tabular-nums"
           />
         )}
       />
       {description && !errorMessage && (
-        <p className="text-2xs text-ash/60 sm:text-xs">{description}</p>
+        <p className="font-sans text-2xs font-normal italic text-ash">
+          {description}
+        </p>
       )}
       {errorMessage && (
-        <p className="flex items-center gap-1 text-2xs text-alert-red sm:text-xs">
+        <p className="flex items-center gap-1 font-sans text-2xs font-medium italic text-alert-red">
           <AlertCircle className="h-3 w-3" />
           {errorMessage}
         </p>

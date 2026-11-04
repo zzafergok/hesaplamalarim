@@ -5,19 +5,9 @@ export type RouteRobots = {
   follow: boolean;
 };
 
-export type RouteSection = 'public' | 'auth' | 'admin';
+export type RouteSection = 'public';
 
-export type MetadataRouteId =
-  | 'publicHome'
-  | 'publicCulture'
-  | 'publicLogin'
-  | 'authHome'
-  | 'authWorkspace'
-  | 'authSettings'
-  | 'adminLogin'
-  | 'adminOverview'
-  | 'adminUsers'
-  | 'adminSettings';
+export type MetadataRouteId = 'publicHome' | 'hesaplamalar';
 
 export type LocalizedRouteMetadata = {
   title: string;
@@ -33,7 +23,7 @@ export type RouteMetadataDescriptor = {
 };
 
 export type RouteMetadataInput = {
-  path: string;
+  path?: string;
   section?: RouteSection;
   robots?: RouteRobots;
   locale?: Partial<Record<Locale, Partial<LocalizedRouteMetadata>>>;

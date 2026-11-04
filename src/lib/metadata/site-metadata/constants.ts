@@ -1,25 +1,25 @@
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   process.env.SITE_URL ??
-  'https://tulpar.dev';
+  'https://hesaplamalarim.dev';
 
 export const siteMetadata = {
-  name: 'Tulpar',
-  legalName: 'Tulpar Next.js Uygulama Şablonu ve Kültür Temeli',
+  name: 'Hesaplamalarım',
+  legalName: 'Hesaplamalarım - Çevrimiçi Finans, Vergi ve Tazminat Hesaplama Platformu',
   description:
-    'Geliştiricilere kadim Türk kültürü ve renk kozmolojisini öğretirken modern Next.js 16 mimarisini sunan domain-independent kurumsal uygulama şablonu.',
+    '2026 yılı güncel yasal mevzuatına uygun kıdem tazminatı, ihbar tazminatı, brüt-net maaş ve bordro hesaplama araçları.',
   url: new URL(siteUrl),
-  creator: 'Tulpar',
-  publisher: 'Tulpar',
+  creator: 'Hesaplamalarım',
+  publisher: 'Hesaplamalarım',
   keywords: [
-    'Tulpar',
-    'Next.js template',
-    'Next.js 16 starter kit',
-    'Turkish culture showcase',
-    'application shell',
-    'admin dashboard',
-    'authenticated workspace',
-    'cultural knowledge cards',
+    'Hesaplamalarım',
+    'kıdem tazminatı hesaplama',
+    'ihbar tazminatı hesaplama',
+    'brütten nete maaş',
+    'netten brüte maaş',
+    'maaş bordrosu hesaplama',
+    '2026 vergi dilimleri',
+    'çevrimiçi hesaplama araçları',
   ],
   assets: {
     icon16: '/assets/images/favicon-16x16.png',
@@ -33,5 +33,5 @@ export const siteMetadata = {
     openGraph: '/assets/images/tulpar-open-graph.jpeg',
   },
   aiSummary:
-    'Tulpar is an enterprise-grade Next.js 16 application template and starter kit featuring an educational Turkic culture and AI prompt studio showcase alongside public, authenticated, and admin shells.',
+    'Hesaplamalarım is an online calculator suite offering up-to-date 2026 severance pay, notice indemnity, and salary/payroll calculations.',
 } as const;

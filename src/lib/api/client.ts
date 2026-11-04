@@ -1,4 +1,3 @@
-import { useAuthStore } from '@/stores/use-auth-store';
 import {
   ApiError,
   ErrorInterceptor,
@@ -18,24 +17,15 @@ class ApiClient {
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
     this.defaultTimeout = 15000;
 
-    // Register built-in default interceptors
     this.registerDefaultInterceptors();
   }
 
   private registerDefaultInterceptors() {
-    // 1. Default Request Interceptor: Inject Auth Token & Content-Type
     this.useRequestInterceptor((url, config) => {
       const headers = new Headers(config.headers);
 
       if (!headers.has('Content-Type') && !(config.body instanceof FormData)) {
         headers.set('Content-Type', 'application/json');
-      }
-
-      if (!config.skipAuth) {
-        const token = useAuthStore.getState().token;
-        if (token && !headers.has('Authorization')) {
-          headers.set('Authorization', `Bearer ${token}`);
-        }
       }
 
       return {
@@ -47,13 +37,7 @@ class ApiClient {
       };
     });
 
-    // 2. Default Response Interceptor: Check HTTP status & 401 Auth handling
     this.useResponseInterceptor(async (response) => {
-      if (response.status === 401) {
-        // Automatic logout on 401 Unauthorized
-        useAuthStore.getState().clearAuth();
-      }
-
       if (!response.ok) {
         let errorData: unknown;
         try {
@@ -61,75 +45,49 @@ class ApiClient {
         } catch {
           errorData = await response.text();
         }
-        throw new ApiError(
-          response.status,
-          response.statusText,
-          errorData,
-          typeof errorData === 'object' && errorData && 'message' in errorData
-            ? String((errorData as { message: unknown }).message)
-            : undefined,
-        );
-      }
 
+        const message =
+          typeof errorData === 'object' &&
+          errorData !== null &&
+          'message' in errorData
+            ? String((errorData as { message: unknown }).message)
+            : response.statusText || 'Bir hata oluştu';
+
+        throw new ApiError(message, response.status, errorData);
+      }
       return response;
     });
   }
 
-  // Add custom Request Interceptor
   public useRequestInterceptor(interceptor: RequestInterceptor): () => void {
     this.requestInterceptors.push(interceptor);
     return () => {
-      this.requestInterceptors = this.requestInterceptors.filter(
-        (i) => i !== interceptor,
-      );
+      const index = this.requestInterceptors.indexOf(interceptor);
+      if (index !== -1) this.requestInterceptors.splice(index, 1);
     };
   }
 
-  // Add custom Response Interceptor
   public useResponseInterceptor(interceptor: ResponseInterceptor): () => void {
     this.responseInterceptors.push(interceptor);
     return () => {
-      this.responseInterceptors = this.responseInterceptors.filter(
-        (i) => i !== interceptor,
-      );
+      const index = this.responseInterceptors.indexOf(interceptor);
+      if (index !== -1) this.responseInterceptors.splice(index, 1);
     };
   }
 
-  // Add custom Error Interceptor
   public useErrorInterceptor(interceptor: ErrorInterceptor): () => void {
     this.errorInterceptors.push(interceptor);
     return () => {
-      this.errorInterceptors = this.errorInterceptors.filter(
-        (i) => i !== interceptor,
-      );
+      const index = this.errorInterceptors.indexOf(interceptor);
+      if (index !== -1) this.errorInterceptors.splice(index, 1);
     };
   }
 
-  // Primary Request Method
-  public async request<T>(
-    endpoint: string,
-    config: RequestConfig = {},
-  ): Promise<T> {
-    let fullUrl = endpoint.startsWith('http')
-      ? endpoint
-      : `${this.baseUrl}${endpoint.startsWith('/') ? '' : '/'}${endpoint}`;
-
-    // Handle Query Parameters
-    if (config.params) {
-      const searchParams = new URLSearchParams();
-      Object.entries(config.params).forEach(([key, value]) => {
-        if (value !== undefined && value !== null) {
-          searchParams.append(key, String(value));
-        }
-      });
-      const queryString = searchParams.toString();
-      if (queryString) {
-        fullUrl += `${fullUrl.includes('?') ? '&' : '?'}${queryString}`;
-      }
-    }
-
-    // Apply Request Interceptors
-    let currentUrl = fullUrl;
+  private async executeInterceptors(
+    url: string,
+    config: RequestConfig,
+  ): Promise<{ url: string; config: RequestConfig }> {
+    let currentUrl = url;
     let currentConfig = { ...config };
 
     for (const interceptor of this.requestInterceptors) {
@@ -138,93 +96,93 @@ class ApiClient {
       currentConfig = result.config;
     }
 
-    // Abort Timeout Controller
-    const controller = new AbortController();
-    const timeout = currentConfig.timeout || this.defaultTimeout;
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
+    return { url: currentUrl, config: currentConfig };
+  }
 
-    // Build fetch options
-    const { body, ...customOptions } = currentConfig;
-    const fetchOptions: RequestInit = {
-      ...customOptions,
-      signal: controller.signal,
-      body:
-        body && typeof body === 'object' && !(body instanceof FormData)
-          ? JSON.stringify(body)
-          : (body as BodyInit),
-    };
+  public async request<T = unknown>(
+    endpoint: string,
+    config: RequestConfig = {},
+  ): Promise<T> {
+    const fullUrl = endpoint.startsWith('http')
+      ? endpoint
+      : `${this.baseUrl}${endpoint}`;
 
     try {
-      let response = await fetch(currentUrl, fetchOptions);
+      const { url, config: finalConfig } = await this.executeInterceptors(
+        fullUrl,
+        config,
+      );
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(
+        () => controller.abort(),
+        finalConfig.timeout || this.defaultTimeout,
+      );
+
+      const signal = finalConfig.signal || controller.signal;
+
+      let response = await fetch(url, {
+        ...finalConfig,
+        signal,
+      });
+
       clearTimeout(timeoutId);
 
-      // Apply Response Interceptors
       for (const interceptor of this.responseInterceptors) {
-        response = await interceptor(response, currentConfig);
+        response = await interceptor(response);
       }
 
-      // Handle 204 No Content
       if (response.status === 204) {
         return {} as T;
       }
 
-      const data = await response.json();
-      return data as T;
+      return (await response.json()) as T;
     } catch (error: unknown) {
-      clearTimeout(timeoutId);
+      let finalError: Error =
+        error instanceof Error ? error : new Error(String(error));
 
-      let finalError: Error;
-      if (error instanceof ApiError) {
-        finalError = error;
-      } else if (error instanceof Error && error.name === 'AbortError') {
-        finalError = new ApiError(408, 'Request Timeout', null, 'Request timed out');
-      } else {
-        finalError =
-          error instanceof Error
-            ? error
-            : new Error('An unexpected network error occurred');
+      if (finalError.name === 'AbortError') {
+        finalError = new ApiError('İstek zaman aşımına uğradı', 408);
       }
 
-      // Execute Error Interceptors
       for (const interceptor of this.errorInterceptors) {
-        await interceptor(finalError);
+        finalError = await interceptor(finalError);
       }
 
       throw finalError;
     }
   }
 
-  // Shortcut HTTP Methods
-  public get<T>(endpoint: string, config?: RequestConfig): Promise<T> {
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
+  public get<T>(url: string, config?: RequestConfig): Promise<T> {
+    return this.request<T>(url, { ...config, method: 'GET' });
   }
 
   public post<T>(
-    endpoint: string,
-    body?: unknown,
+    url: string,
+    data?: unknown,
     config?: RequestConfig,
   ): Promise<T> {
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
+    return this.request<T>(url, {
+      ...config,
+      method: 'POST',
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    });
   }
 
   public put<T>(
-    endpoint: string,
-    body?: unknown,
+    url: string,
+    data?: unknown,
     config?: RequestConfig,
   ): Promise<T> {
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
+    return this.request<T>(url, {
+      ...config,
+      method: 'PUT',
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    });
   }
 
-  public patch<T>(
-    endpoint: string,
-    body?: unknown,
-    config?: RequestConfig,
-  ): Promise<T> {
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
-
-  public delete<T>(endpoint: string, config?: RequestConfig): Promise<T> {
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
+  public delete<T>(url: string, config?: RequestConfig): Promise<T> {
+    return this.request<T>(url, { ...config, method: 'DELETE' });
   }
 }
 

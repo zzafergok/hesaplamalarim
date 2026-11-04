@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import {
+  JetBrains_Mono,
+  Plus_Jakarta_Sans,
+  Space_Grotesk,
+} from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/core/toast';
 import { getCurrentLocale } from '@/lib/i18n/server-locale';
@@ -11,13 +15,26 @@ import {
   ThemeProvider,
 } from '@/components/providers';
 
-const inter = Inter({
-  subsets: ['latin'],
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-sans',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
   variable: '--font-space-grotesk',
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  display: 'swap',
   variable: '--font-jetbrains-mono',
 });
 
@@ -32,10 +49,15 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const locale = await getCurrentLocale();
+  const fontVars = `${plusJakartaSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`;
 
   return (
-    <html lang={locale} className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang={locale}
+      className={`dark ${fontVars}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-screen bg-background font-sans text-body-sm font-normal text-foreground antialiased">
         <ClientLocaleProvider initialLocale={locale}>
           <LocaleHtmlSync />
           <ThemeProvider>

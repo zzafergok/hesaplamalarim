@@ -1,53 +1,21 @@
 import Image from 'next/image';
-import { Link } from '@/components/core/link';
-import {
-  Boxes,
-  Home,
-  LogIn,
-  Settings,
-  Shield,
-  Users,
-  Wrench,
-} from 'lucide-react';
+import { Boxes, Home } from 'lucide-react';
 
 import { Button } from '@/components/core/button';
-import { AdminAppShellLayout } from '@/components/layout/AdminAppShellLayout';
-import { AppShellLayout } from '@/components/layout/AppShellLayout';
+import { Link } from '@/components/core/link';
 import { LanguageSwitcher } from '@/components/layout/language-switcher';
 import { ThemeToggle } from '@/components/layout/theme-toggle';
-import { cn } from '@/lib/utils';
 import { getCurrentLocale } from '@/lib/i18n/server-locale';
 import { siteMetadata } from '@/lib/metadata/site-metadata';
 import { getShellCopy } from './i18n';
-import type { ShellCopy } from './types';
-import type { ShellNavItem } from './types';
+import type { ShellCopy, ShellNavItem } from './types';
 
 const navIcons = {
-  boxes: Boxes,
   home: Home,
-  login: LogIn,
-  settings: Settings,
-  shield: Shield,
-  users: Users,
-  wrench: Wrench,
+  boxes: Boxes,
 } as const;
 
-function mapNavItems(
-  items: ReturnType<typeof getShellCopy>['publicNav'],
-): ShellNavItem[];
-function mapNavItems(
-  items: ReturnType<typeof getShellCopy>['authNav'],
-): ShellNavItem[];
-function mapNavItems(
-  items: ReturnType<typeof getShellCopy>['adminNav'],
-): ShellNavItem[];
-function mapNavItems(
-  items: Array<{
-    href: string;
-    label: string;
-    icon: string;
-  }>,
-): ShellNavItem[] {
+function mapNavItems(items: ShellCopy['publicNav']): ShellNavItem[] {
   return items.map((item) => ({
     href: item.href,
     label: item.label,
@@ -64,10 +32,10 @@ export function BrandMark({
 }) {
   return (
     <Link href="/" className="flex items-center gap-3">
-      <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border/60 bg-white p-0.5 shadow-sm">
+      <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-gunmetal/70 bg-white p-0.5 shadow-sm">
         <Image
           src={siteMetadata.assets.logo}
-          alt={`${copy.title} brand mark`}
+          alt={`${copy.title} marka logosu`}
           width={36}
           height={36}
           className="h-full w-full object-contain"
@@ -76,10 +44,10 @@ export function BrandMark({
       </span>
       {!compact && (
         <span>
-          <span className="block font-mono text-2xs font-black uppercase tracking-widest text-foreground">
+          <span className="block font-display text-caption font-bold tracking-tight text-titanium">
             {copy.title}
           </span>
-          <span className="block text-xs text-muted-foreground">
+          <span className="block font-sans text-2xs font-normal italic text-ash">
             {copy.subtitle}
           </span>
         </span>
@@ -88,34 +56,20 @@ export function BrandMark({
   );
 }
 
-function ShellNav({
-  items,
-  direction = 'row',
-}: {
-  items: ShellNavItem[];
-  direction?: 'row' | 'column';
-}) {
+function ShellNav({ items }: { items: ShellNavItem[] }) {
   if (items.length === 0) return null;
   return (
-    <nav
-      className={cn(
-        'flex gap-2',
-        direction === 'column' ? 'flex-col' : 'items-center',
-      )}
-    >
+    <nav className="flex items-center gap-1.5">
       {items.map((item) => (
         <Button
           key={item.href}
           asChild
           variant="ghost"
           size="sm"
-          className={cn(
-            'rounded-none text-compact font-bold uppercase tracking-widest text-ash hover:text-titanium',
-            direction === 'column' && 'justify-start',
-          )}
+          className="font-sans text-compact font-semibold tracking-tight text-ash hover:text-titanium"
         >
           <Link href={item.href}>
-            <item.icon className="mr-2 h-3.5 w-3.5" />
+            <item.icon className="mr-1.5 h-3.5 w-3.5 text-tulpar-blue" />
             {item.label}
           </Link>
         </Button>
@@ -138,8 +92,8 @@ export async function PublicShell({ children }: { children: React.ReactNode }) {
   const copy = getShellCopy(locale);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-40 border-b border-gunmetal bg-void-black/90 backdrop-blur">
+    <div className="min-h-screen bg-background font-sans text-foreground">
+      <header className="sticky top-0 z-40 border-b border-gunmetal/70 bg-obsidian/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
           <BrandMark copy={copy.brand} />
           <div className="flex items-center gap-3">
@@ -151,12 +105,4 @@ export async function PublicShell({ children }: { children: React.ReactNode }) {
       <main>{children}</main>
     </div>
   );
-}
-
-export async function AuthShell({ children }: { children: React.ReactNode }) {
-  return <AppShellLayout>{children}</AppShellLayout>;
-}
-
-export async function AdminShell({ children }: { children: React.ReactNode }) {
-  return <AdminAppShellLayout>{children}</AdminAppShellLayout>;
 }

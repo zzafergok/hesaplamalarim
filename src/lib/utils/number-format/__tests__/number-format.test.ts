@@ -26,6 +26,12 @@ describe('Number Formatting Utilities', () => {
       expect(result.length).toBeGreaterThan(0);
     });
 
+    it('should support currency and locale string arguments overload', () => {
+      const result = formatCurrency(50000, 'TRY', 'tr-TR');
+      expect(result).toBeDefined();
+      expect(result).toContain('50.000');
+    });
+
     it('should handle non-finite numbers safely', () => {
       expect(formatCurrency(NaN, { fallback: '-' })).toBe('-');
       expect(formatCurrency(Infinity, { fallback: 'N/A' })).toBe('N/A');

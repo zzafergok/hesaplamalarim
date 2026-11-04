@@ -1,1 +1,0 @@
-export { AdminOverviewScreen } from './screen';
