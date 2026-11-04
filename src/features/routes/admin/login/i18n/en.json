@@ -1,0 +1,9 @@
+{
+  "title": "Admin login",
+  "description": "Admin sign-in screen for management access.",
+  "emailLabel": "Email",
+  "emailPlaceholder": "admin@example.com",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "submitLabel": "Sign In"
+}

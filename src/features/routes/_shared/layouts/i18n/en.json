@@ -1,0 +1,69 @@
+{
+  "brand": {
+    "title": "Tulpar",
+    "subtitle": "Next.js Template & Culture Atlas"
+  },
+  "publicNav": [],
+  "authNav": [
+    {
+      "href": "/home",
+      "label": "Home",
+      "subtitle": "Dashboard overview",
+      "icon": "home"
+    },
+    {
+      "href": "/workspace",
+      "label": "Workspace",
+      "subtitle": "Items & modules",
+      "icon": "wrench"
+    },
+    {
+      "href": "/settings",
+      "label": "Settings",
+      "subtitle": "Preferences & account",
+      "icon": "settings"
+    }
+  ],
+  "adminNav": [
+    {
+      "href": "/admin",
+      "label": "Overview",
+      "subtitle": "Management overview",
+      "icon": "shield"
+    },
+    {
+      "href": "/admin/users",
+      "label": "Users",
+      "subtitle": "User management",
+      "icon": "users"
+    },
+    {
+      "href": "/admin/settings",
+      "label": "Settings",
+      "subtitle": "Platform settings",
+      "icon": "settings"
+    }
+  ],
+  "authHeader": {
+    "title": "Auth Area",
+    "subtitle": "Protected application area"
+  },
+  "adminHeader": {
+    "title": "Admin Area",
+    "subtitle": "Management control area",
+    "manageLabel": "Manage"
+  },
+  "loading": "Loading...",
+  "footer": "Tulpar Template © 2026",
+  "preferenceControls": {
+    "themeLight": "Switch to light theme",
+    "themeDark": "Switch to dark theme",
+    "themeError": "The theme preference could not be saved.",
+    "languageError": "The language preference could not be saved."
+  },
+  "density": {
+    "label": "View density",
+    "compact": "Compact",
+    "detailed": "Detailed"
+  }
+}

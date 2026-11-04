@@ -1,0 +1,10 @@
+{
+  "title": "Admin settings",
+  "description": "Configuration surface for Tulpar-level controls.",
+  "cardTitle": "Environment",
+  "appNameLabel": "Application Name",
+  "appNamePlaceholder": "Tulpar",
+  "maintenanceTitle": "Maintenance mode",
+  "maintenanceDescription": "Disable public entrypoints.",
+  "submitLabel": "Save configuration"
+}

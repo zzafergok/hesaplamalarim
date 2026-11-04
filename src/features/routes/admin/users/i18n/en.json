@@ -1,0 +1,15 @@
+{
+  "title": "Users",
+  "description": "User access roster and role management.",
+  "cardTitle": "Access roster",
+  "columns": {
+    "name": "User Name",
+    "role": "Role",
+    "status": "Status"
+  },
+  "users": [
+    { "name": "Alex Morgan", "role": "Owner", "status": "Active" },
+    { "name": "Jamie Lee", "role": "Admin", "status": "Invited" },
+    { "name": "Taylor Kim", "role": "Member", "status": "Active" }
+  ]
+}

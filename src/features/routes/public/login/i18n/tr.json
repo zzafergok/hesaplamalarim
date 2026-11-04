@@ -1,0 +1,10 @@
+{
+  "title": "Giriş Yap",
+  "description": "Hesabınıza erişmek için e-posta ve şifrenizle giriş yapın.",
+  "emailLabel": "E-posta",
+  "emailPlaceholder": "adiniz@ornek.com",
+  "passwordLabel": "Şifre",
+  "passwordPlaceholder": "Şifrenizi girin",
+  "submitLabel": "Giriş Yap",
+  "adminLoginLabel": "Yönetici Girişi"
+}

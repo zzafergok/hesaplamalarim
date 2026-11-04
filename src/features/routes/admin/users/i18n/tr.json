@@ -1,0 +1,15 @@
+{
+  "title": "Kullanıcılar",
+  "description": "Kullanıcı erişim listesi ve rol yönetimi paneli.",
+  "cardTitle": "Erişim Listesi",
+  "columns": {
+    "name": "Kullanıcı Adı",
+    "role": "Rol",
+    "status": "Durum"
+  },
+  "users": [
+    { "name": "Alex Morgan", "role": "Kurucu (Owner)", "status": "Aktif" },
+    { "name": "Jamie Lee", "role": "Yönetici (Admin)", "status": "Davet Edildi" },
+    { "name": "Taylor Kim", "role": "Üye (Member)", "status": "Aktif" }
+  ]
+}

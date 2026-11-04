@@ -1,0 +1,10 @@
+{
+  "title": "Hesap Ayarları",
+  "description": "Tulpar uygulama kabuğu için hesap düzeyinde tercihler.",
+  "cardTitle": "Profil Bilgileri",
+  "displayNameLabel": "Görünen Ad",
+  "displayNamePlaceholder": "Tulpar Kullanıcısı",
+  "updatesTitle": "Tulpar Güncellemeleri",
+  "updatesDescription": "Kültür atlası ve platform bildirimlerini alın.",
+  "submitLabel": "Ayarları Kaydet"
+}

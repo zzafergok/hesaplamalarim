@@ -1,0 +1,11 @@
+{
+  "badge": "Authenticated",
+  "title": "Dashboard overview",
+  "description": "This protected area uses neutral sample data so you can replace the content with any business domain later.",
+  "actionLabel": "Add sample",
+  "metrics": [
+    { "label": "Sample records", "value": "24", "icon": "boxes" },
+    { "label": "Pending items", "value": "08", "icon": "activity" },
+    { "label": "Last update", "value": "Now", "icon": "clock" }
+  ]
+}

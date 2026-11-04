@@ -1,0 +1,141 @@
+{
+  "badges": [
+    "Next.js 16 Kurumsal Başlangıç Şablonu",
+    "Katı TypeScript (Sıfır any)",
+    "Çoklu Kabuk Mimarisi",
+    "30+ Özel Core Bileşen"
+  ],
+  "hero": {
+    "title": "Tulpar: Kurumsal Next.js 16 Uygulama Şablonu",
+    "description": "Modern, ölçeklenebilir ve kurumsal düzeyde web uygulamaları geliştirmek için tasarlanmış referans mimari. Modüler uygulama kabukları (Public, Auth, Admin), tip güvenli formlar, Radix UI tabanlı özel core bileşenler ve eğitici kadim Türk kültürü atlası.",
+    "loginAction": "Giriş Yap",
+    "adminAction": "Yönetici Alanı"
+  },
+  "cultureCallout": {
+    "badge": "Kültür & Mitoloji Atlası",
+    "title": "Tulpar ve Kadim Türk Kültürünü Keşfedin",
+    "description": "Geliştiricilere ilham vermek amacıyla hazırlanmış 40+ otantik kültürel sembol, Göktürk 4 yön renk kozmolojisi, efsanevi varlıklar ve Midjourney / DALL-E / Gemini için hazır Yapay Zeka (AI Prompt) üretim stüdyosu.",
+    "features": [
+      "16 Kozmoloji & Sanat Rengi (Ak, Kara, Gök, Kızıl, Sarı vb.)",
+      "10 Doğa, Ağaç & Çiçek Motifi (Hayat Ağacı, Lale, Gül vb.)",
+      "14 Hayvan & Savaşçı Totemi (Bozkurt, Tulpar, Kartal vb.)",
+      "6 Mitolojik Varlık (Şahmeran, Hüma, Zümrüdüanka vb.)"
+    ],
+    "action": "Kültür ve Mitoloji Atlasını Aç →"
+  },
+  "featuresSection": {
+    "badge": "Mimari Özellikler",
+    "title": "Kurumsal Seviye Mimari & Teknik Altyapı",
+    "description": "Tulpar şablonu, canlı ortamda (production) kanıtlanmış mühendislik kalıplarını ve modern kurumsal web standartlarını bir arada sunar.",
+    "cards": [
+      {
+        "icon": "layers",
+        "badge": "App Router & React 19",
+        "title": "Modern Çekirdek Mimari",
+        "description": "Next.js 16 App Router altyapısı ile Server ve Client Components ayrımı en üst düzeyde optimize edilmiştir.",
+        "points": [
+          "Route grupları: (public), (auth), (admin)",
+          "Statik ve dinamik Metadata API entegrasyonu",
+          "Otomatik sitemap, robots.txt ve llms.txt çıktısı"
+        ]
+      },
+      {
+        "icon": "palette",
+        "badge": "Zero-Primitive Standard",
+        "title": "30+ Özel Core Bileşen",
+        "description": "Ham HTML primitifleri yerine tam tip güvenli, Radix UI tabanlı erişilebilir özel bileşen kütüphanesi.",
+        "points": [
+          "Button, Input, Select, Table, Dialog, Drawer, Card",
+          "Modern Date Picker, Tabs, Accordion ve Slider",
+          "WCAG standartlarında klavye ve ekran okuyucu uyumu"
+        ]
+      },
+      {
+        "icon": "layout",
+        "badge": "Multi-Shell System",
+        "title": "3 Ayrı Uygulama Kabuğu",
+        "description": "Farklı erişim katmanları ve kullanıcı rolleri için bağımsız tasarlanmış uygulama kabukları.",
+        "points": [
+          "Public Shell: Ziyaretçiler için genel vitrin ve tanıtım",
+          "Auth Shell: Giriş yapmış kullanıcılar için çalışma alanı (/home, /workspace)",
+          "Admin Shell: İleri düzey yönetim ve izleme paneli"
+        ]
+      },
+      {
+        "icon": "shield",
+        "badge": "TypeScript Strict",
+        "title": "Sıfır \"any\" & Katı Doğrulama",
+        "description": "Tip güvenliği ve veri bütünlüğü istemci ve sunucu sınırlarında en katı kurallarla garanti altına alınmıştır.",
+        "points": [
+          "İstemci ve sunucu doğrulaması için Zod şemaları",
+          "React Hook Form ile entegre form yönetimi",
+          "250 satır dosya sınırı ve modüler klasör düzeni"
+        ]
+      },
+      {
+        "icon": "globe",
+        "badge": "i18n & Theme",
+        "title": "Çoklu Dil & Tema Sistemi",
+        "description": "Kullanıcı tercihlerini kesintisiz saklayan ve yöneten altyapı.",
+        "points": [
+          "Türkçe ve İngilizce eksiksiz yerelleştirme (i18n)",
+          "Koyu ve Açık temalar arasında anında geçiş",
+          "Cookie tabanlı sunucu ve istemci durum senkronizasyonu"
+        ]
+      },
+      {
+        "icon": "check",
+        "badge": "Production Ready",
+        "title": "Performans & Güvenlik",
+        "description": "Canlıya almaya hazır güvenlik başlıkları, hata sınırları ve Core Web Vitals iyileştirmeleri.",
+        "points": [
+          "Core Web Vitals optimizasyonları (LCP, CLS, INP)",
+          "Güvenli CSP, HSTS ve XSS koruma başlıkları",
+          "Kurumsal Error Boundary ve kurtarma mekanizmaları"
+        ]
+      }
+    ]
+  },
+  "quickRoutesSection": {
+    "badge": "Hızlı Gezinme",
+    "title": "Şablon Rotalarını Keşfedin",
+    "description": "Tulpar içinde hazır gelen tüm uygulama ekranlarına doğrudan ulaşın.",
+    "routes": [
+      {
+        "href": "/culture",
+        "title": "Kültür & Mitoloji Atlası",
+        "subtitle": "40+ Kültür kartı ve Yapay Zeka prompt stüdyosu",
+        "badge": "Vitrin",
+        "icon": "sparkles"
+      },
+      {
+        "href": "/login",
+        "title": "Kullanıcı Girişi",
+        "subtitle": "Kimlik doğrulama ve giriş formu",
+        "badge": "Public",
+        "icon": "lock"
+      },
+      {
+        "href": "/home",
+        "title": "Kullanıcı Paneli",
+        "subtitle": "Korumalı kontrol paneli alanı",
+        "badge": "Auth",
+        "icon": "user"
+      },
+      {
+        "href": "/workspace",
+        "title": "Çalışma Alanı (Kayıtlar)",
+        "subtitle": "Modüler veri ve öğe yönetimi",
+        "badge": "Auth",
+        "icon": "globe"
+      },
+      {
+        "href": "/admin",
+        "title": "Admin Yönetim Paneli",
+        "subtitle": "Yönetici istatistikleri ve kontrolleri",
+        "badge": "Admin",
+        "icon": "shield"
+      }
+    ]
+  }
+}

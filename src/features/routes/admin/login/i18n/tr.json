@@ -1,0 +1,9 @@
+{
+  "title": "Yönetici Girişi",
+  "description": "Yönetim paneli erişimi için yönetici giriş ekranı.",
+  "emailLabel": "E-posta",
+  "emailPlaceholder": "admin@example.com",
+  "passwordLabel": "Şifre",
+  "passwordPlaceholder": "Şifrenizi girin",
+  "submitLabel": "Giriş Yap"
+}

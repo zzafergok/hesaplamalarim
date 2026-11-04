@@ -1,0 +1,245 @@
+/* shadcn/typeset: styling system for HTML and rendered markdown */
+
+.typeset {
+  --typeset-font-body: inherit;
+  --typeset-font-heading: inherit;
+  --typeset-font-mono: inherit;
+
+  --typeset-size: 1em; /* body font-size */
+  --typeset-leading: 1.75; /* line-height */
+  --typeset-flow: 1.25em; /* space between blocks */
+
+  font-family: var(--typeset-font-body);
+  font-size: var(--typeset-size);
+  line-height: var(--typeset-leading);
+  color: currentColor;
+}
+
+/* Presets */
+.typeset-docs {
+  --typeset-size: 15px;
+  --typeset-leading: 1.75;
+  --typeset-flow: 1.5em;
+}
+
+.typeset-chat {
+  --typeset-flow: 1em;
+  --typeset-leading: 1.6;
+}
+
+.typeset-reading {
+  --typeset-size: 18px;
+  --typeset-leading: 1.9;
+  --typeset-flow: 2em;
+}
+
+.typeset-compact {
+  --typeset-size: 14px;
+  --typeset-leading: 1.6;
+  --typeset-flow: 1em;
+}
+
+.typeset-large {
+  --typeset-size: 16px;
+  --typeset-leading: 2;
+  --typeset-flow: 2em;
+}
+
+.dark .typeset {
+  --typeset-leading: 1.85;
+}
+
+/* Streaming-safe one-directional spacing: only margin-block-start */
+.typeset
+  :where(*:not(:where(.not-typeset, [data-not-typeset], .not-typeset *)))
+  + :where(*:not(:where(.not-typeset, [data-not-typeset], .not-typeset *))) {
+  margin-block-start: var(--typeset-flow);
+}
+
+/* Headings */
+.typeset
+  :where(h1, h2, h3, h4, h5, h6):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-family: var(--typeset-font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  color: inherit;
+  margin-block-start: calc(var(--typeset-flow) * 1.5);
+}
+
+.typeset
+  :where(h1):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-size: 2em;
+}
+
+.typeset
+  :where(h2):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-size: 1.5em;
+}
+
+.typeset
+  :where(h3):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-size: 1.25em;
+}
+
+.typeset
+  :where(h4, h5, h6):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-size: 1.1em;
+}
+
+/* Paragraphs */
+.typeset
+  :where(p):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  margin-block-start: var(--typeset-flow);
+}
+
+/* Links */
+.typeset
+  :where(a):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  color: hsl(var(--tulpar-blue, 215 88% 46%));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s ease;
+}
+
+.typeset
+  :where(a):hover:where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  opacity: 0.8;
+}
+
+/* Lists */
+.typeset
+  :where(ul, ol):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  padding-inline-start: 1.5em;
+  margin-block-start: var(--typeset-flow);
+}
+
+.typeset
+  :where(ul):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  list-style-type: disc;
+}
+
+.typeset
+  :where(ol):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  list-style-type: decimal;
+}
+
+.typeset
+  :where(li):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  margin-block-start: calc(var(--typeset-flow) * 0.35);
+}
+
+/* Blockquote */
+.typeset
+  :where(blockquote):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  border-inline-start: 3px solid hsl(var(--gunmetal, 222 25% 16%));
+  padding-inline-start: 1em;
+  font-style: italic;
+  color: hsl(var(--ash, 215 18% 55%));
+  margin-block-start: var(--typeset-flow);
+}
+
+/* Inline Code */
+.typeset
+  :where(code):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-family: var(--typeset-font-mono);
+  font-size: 0.875em;
+  background-color: hsl(var(--gunmetal, 222 25% 16%) / 0.4);
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+}
+
+/* Preformatted Blocks */
+.typeset
+  :where(pre):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-family: var(--typeset-font-mono);
+  font-size: 0.875em;
+  padding: 1em;
+  overflow-x: auto;
+  background-color: hsl(var(--void-black, 222 47% 3%));
+  border: 1px solid hsl(var(--gunmetal, 222 25% 16%) / 0.8);
+  border-radius: 0.375rem;
+  margin-block-start: var(--typeset-flow);
+}
+
+.typeset
+  :where(pre code):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Horizontal Rule */
+.typeset
+  :where(hr):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  border: none;
+  border-block-start: 1px solid hsl(var(--gunmetal, 222 25% 16%) / 0.6);
+  margin-block-start: calc(var(--typeset-flow) * 1.5);
+}
+
+/* Tables */
+.typeset
+  :where(table):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block-start: var(--typeset-flow);
+  font-size: 0.9em;
+}
+
+.typeset
+  :where(th, td):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  padding: 0.6em 0.8em;
+  text-align: start;
+  border-block-end: 1px solid hsl(var(--gunmetal, 222 25% 16%) / 0.4);
+}
+
+.typeset
+  :where(th):where(
+    :not(:where(.not-typeset, [data-not-typeset], .not-typeset *))
+  ) {
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Responsive Table Scroll */
+.typeset-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Yönetim Özeti",
+  "description": "Kullanıcılar, ayarlar ve sistem durumu için genel yönetim paneli.",
+  "cards": [
+    { "label": "Sistem Durumu", "value": "Hazır", "icon": "activity" },
+    { "label": "Erişim Seviyesi", "value": "Yönetici", "icon": "shieldCheck" },
+    { "label": "Kültür Verisi", "value": "Aktif", "icon": "database" }
+  ]
+}

@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import './typeset.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Disable default cross-fade so only the custom clip-path animation is visible */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+@layer base {
+  :root {
+    /* ── Light Mode Semantic Variables ── */
+    --background: 38 30% 96%;
+    --foreground: 20 15% 10%;
+    --card: 36 20% 91%;
+    --card-foreground: 20 15% 10%;
+    --popover: 36 20% 91%;
+    --popover-foreground: 20 15% 10%;
+    --primary-500: 215 88% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 12% 80%;
+    --secondary-foreground: 20 15% 10%;
+    --muted: 33 16% 87%;
+    --muted-foreground: 24 8% 42%;
+    --accent: 30 12% 80%;
+    --accent-foreground: 20 15% 10%;
+    --destructive: 0 78.7% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 12% 80%;
+    --input: 36 20% 91%;
+    --ring: 215 88% 46%;
+    --radius: 0.5rem;
+    --chart-1: hsl(12 76% 61%);
+    --chart-2: hsl(173 58% 39%);
+    --chart-3: hsl(197 37% 24%);
+    --chart-4: hsl(43 74% 66%);
+    --chart-5: hsl(27 87% 67%);
+
+    /* ── Tulpar Brand Tokens ── */
+    --tulpar-blue: 215 88% 46%;
+    --tulpar-gold: 43 85% 48%;
+    --tulpar-firuze: 174 75% 36%;
+    --tulpar-cosmic: 222 47% 12%;
+
+    /* ── Light Mode: Brutalist Palette DEFAULT Overrides ── */
+    /* Numbered scales remain fixed absolute values; DEFAULTs shift with theme */
+    --void-black: 38 30% 96%; /* near-black → warm cream */
+    --obsidian: 36 20% 91%; /* deep dark → warm parchment */
+    --gunmetal: 30 12% 80%; /* dark border → warm stone */
+    --titanium: 20 15% 10%; /* light text → dark charcoal */
+    --ash: 24 8% 42%; /* medium gray → warm gray */
+
+    /* ── Fixed Brutalist Palette Scales (absolute values, no theme shift) ── */
+
+    /* void-black (Base: #050505) */
+    --void-black-50: 0 0% 97%;
+    --void-black-100: 0 0% 94%;
+    --void-black-200: 0 0% 86%;
+    --void-black-300: 0 0% 77%;
+    --void-black-400: 0 0% 68%;
+    --void-black-500: 0 0% 2%;
+    --void-black-600: 0 0% 1.7%;
+    --void-black-700: 0 0% 1.4%;
+    --void-black-800: 0 0% 1%;
+    --void-black-900: 0 0% 0.6%;
+    --void-black-950: 0 0% 0.3%;
+
+    /* obsidian (Base: #0F0F11) */
+    --obsidian-50: 240 6.2% 97%;
+    --obsidian-100: 240 6.2% 94%;
+    --obsidian-200: 240 6.2% 86%;
+    --obsidian-300: 240 6.2% 77%;
+    --obsidian-400: 240 6.2% 68%;
+    --obsidian-500: 240 6.2% 6.3%;
+    --obsidian-600: 240 6.2% 5.3%;
+    --obsidian-700: 240 6.2% 4.4%;
+    --obsidian-800: 240 6.2% 3.1%;
+    --obsidian-900: 240 6.2% 1.9%;
+    --obsidian-950: 240 6.2% 0.9%;
+
+    /* gunmetal (Base: #2A2A2E) */
+    --gunmetal-50: 240 4.5% 97%;
+    --gunmetal-100: 240 4.5% 94%;
+    --gunmetal-200: 240 4.5% 86%;
+    --gunmetal-300: 240 4.5% 77%;
+    --gunmetal-400: 240 4.5% 68%;
+    --gunmetal-500: 240 4.5% 17.3%;
+    --gunmetal-600: 240 4.5% 14.7%;
+    --gunmetal-700: 240 4.5% 12.1%;
+    --gunmetal-800: 240 4.5% 8.6%;
+    --gunmetal-900: 240 4.5% 5.2%;
+    --gunmetal-950: 240 4.5% 2.6%;
+
+    /* titanium (Base: #E2E2E2) */
+    --titanium-50: 0 0% 97%;
+    --titanium-100: 0 0% 94%;
+    --titanium-200: 0 0% 86%;
+    --titanium-300: 0 0% 77%;
+    --titanium-400: 0 0% 68%;
+    --titanium-500: 0 0% 88.6%;
+    --titanium-600: 0 0% 75.3%;
+    --titanium-700: 0 0% 62%;
+    --titanium-800: 0 0% 44.3%;
+    --titanium-900: 0 0% 26.6%;
+    --titanium-950: 0 0% 13.3%;
+
+    /* ash (Base: #6B6B70) */
+    --ash-50: 240 2.3% 97%;
+    --ash-100: 240 2.3% 94%;
+    --ash-200: 240 2.3% 86%;
+    --ash-300: 240 2.3% 77%;
+    --ash-400: 240 2.3% 68%;
+    --ash-500: 240 2.3% 42.9%;
+    --ash-600: 240 2.3% 36.5%;
+    --ash-700: 240 2.3% 30.1%;
+    --ash-800: 240 2.3% 21.5%;
+    --ash-900: 240 2.3% 12.9%;
+    --ash-950: 240 2.3% 6.4%;
+
+    /* tulpar-blue (Kök Tengri Mavisi: Base #0F4C81 / #2563EB) */
+    --tulpar-blue-50: 217 91% 97%;
+    --tulpar-blue-100: 217 91% 94%;
+    --tulpar-blue-200: 217 91% 86%;
+    --tulpar-blue-300: 217 91% 77%;
+    --tulpar-blue-400: 217 91% 68%;
+    --tulpar-blue-500: 215 88% 46%;
+    --tulpar-blue-600: 215 88% 40%;
+    --tulpar-blue-700: 215 88% 32%;
+    --tulpar-blue-800: 215 88% 24%;
+    --tulpar-blue-900: 215 88% 16%;
+    --tulpar-blue-950: 215 88% 10%;
+    --tulpar-blue: 215 88% 46%;
+
+    /* signal-green (Base: #27AE60) — slightly darker in light mode */
+    --signal-green-50: 145 63.4% 97%;
+    --signal-green-100: 145 63.4% 94%;
+    --signal-green-200: 145 63.4% 86%;
+    --signal-green-300: 145 63.4% 77%;
+    --signal-green-400: 145 63.4% 68%;
+    --signal-green-500: 145 63.4% 41.8%;
+    --signal-green-600: 145 63.4% 35.5%;
+    --signal-green-700: 145 63.4% 29.2%;
+    --signal-green-800: 145 63.4% 20.9%;
+    --signal-green-900: 145 63.4% 12.5%;
+    --signal-green-950: 145 63.4% 6.3%;
+    --signal-green: 145 63.4% 35%;
+
+    /* alert-red (Base: #EB5757) — slightly darker in light mode */
+    --alert-red-50: 0 78.7% 97%;
+    --alert-red-100: 0 78.7% 94%;
+    --alert-red-200: 0 78.7% 86%;
+    --alert-red-300: 0 78.7% 77%;
+    --alert-red-400: 0 78.7% 68%;
+    --alert-red-500: 0 78.7% 63.1%;
+    --alert-red-600: 0 78.7% 53.7%;
+    --alert-red-700: 0 78.7% 44.2%;
+    --alert-red-800: 0 78.7% 31.6%;
+    --alert-red-900: 0 78.7% 18.9%;
+    --alert-red-950: 0 78.7% 9.5%;
+    --alert-red: 0 78.7% 48%;
+
+    /* ── Light Palette Scales ── */
+
+    /* linen (warm off-white, main light background) */
+    --linen-50: 40 40% 99%;
+    --linen-100: 40 35% 97%;
+    --linen-200: 38 32% 94%;
+    --linen-300: 38 28% 89%;
+    --linen-400: 38 22% 83%;
+    --linen-500: 36 18% 75%;
+    --linen-600: 33 14% 62%;
+    --linen-700: 28 10% 47%;
+    --linen-800: 22 8% 31%;
+    --linen-900: 18 7% 17%;
+    --linen-950: 16 6% 9%;
+    --linen: 38 30% 96%;
+
+    /* parchment (warm card surface) */
+    --parchment-50: 38 35% 98%;
+    --parchment-100: 36 28% 95%;
+    --parchment-200: 36 22% 91%;
+    --parchment-300: 35 18% 86%;
+    --parchment-400: 33 15% 79%;
+    --parchment-500: 30 12% 70%;
+    --parchment-600: 27 10% 57%;
+    --parchment-700: 23 8% 43%;
+    --parchment-800: 18 6% 29%;
+    --parchment-900: 14 5% 16%;
+    --parchment-950: 12 4% 8%;
+    --parchment: 36 20% 91%;
+
+    /* sandstone (warm border/divider) */
+    --sandstone-50: 35 25% 97%;
+    --sandstone-100: 34 20% 93%;
+    --sandstone-200: 33 16% 87%;
+    --sandstone-300: 32 13% 80%;
+    --sandstone-400: 30 11% 71%;
+    --sandstone-500: 28 9% 60%;
+    --sandstone-600: 25 7% 48%;
+    --sandstone-700: 22 6% 36%;
+    --sandstone-800: 18 5% 24%;
+    --sandstone-900: 14 4% 13%;
+    --sandstone-950: 12 3% 7%;
+    --sandstone: 30 12% 80%;
+
+    /* ink (dark warm text) */
+    --ink-50: 22 15% 97%;
+    --ink-100: 22 13% 93%;
+    --ink-200: 21 12% 85%;
+    --ink-300: 20 12% 72%;
+    --ink-400: 20 13% 55%;
+    --ink-500: 20 14% 38%;
+    --ink-600: 20 15% 27%;
+    --ink-700: 20 15% 18%;
+    --ink-800: 19 15% 12%;
+    --ink-900: 18 14% 7%;
+    --ink-950: 17 13% 4%;
+    --ink: 20 15% 10%;
+  }
+
+  .dark {
+    /* ── Dark Mode Semantic Variables (Tulpar Cosmic Midnight) ── */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 40% 7.5%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 40% 7.5%;
+    --popover-foreground: 210 40% 98%;
+    --primary-500: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 25% 15%;
+    --muted-foreground: 215 18% 65%;
+    --accent: 222 25% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 25% 16%;
+    --input: 222 25% 16%;
+    --ring: 217 91% 60%;
+    --chart-1: hsl(220 70% 50%);
+    --chart-2: hsl(160 60% 45%);
+    --chart-3: hsl(30 80% 55%);
+    --chart-4: hsl(280 65% 60%);
+    --chart-5: hsl(340 75% 55%);
+
+    /* ── Dark Mode: Brutalist Palette DEFAULT Overrides ── */
+    --void-black: 222 47% 3%;
+    --obsidian: 222 40% 7.5%;
+    --gunmetal: 222 25% 16%;
+    --titanium: 210 40% 98%;
+    --ash: 215 18% 55%;
+
+    /* ── Dark Mode: Brand Color Overrides (Tulpar Palette) ── */
+    --tulpar-blue: 217 91% 60%;
+    --tulpar-gold: 43 90% 55%;
+    --tulpar-firuze: 174 75% 45%;
+    --tulpar-cosmic: 222 47% 5%;
+    --signal-green: 145 63.4% 41.8%;
+    --alert-red: 0 78.7% 63.1%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply bg-background font-sans text-foreground antialiased selection:bg-tulpar-blue/20;
+  }
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gunmetal/60 transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ash/50;
+}
+
+/* Hide Number Input Arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Utility Utilities */
+.glass-panel-premium {
+  @apply border border-titanium/5 bg-obsidian shadow-xl;
+}
+
+/* Landing page grid — color adapts via --gunmetal CSS variable */
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, hsl(var(--gunmetal) / 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--gunmetal) / 0.4) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
+
+/* FAQ assistant radial glow — adapts via --tulpar-blue */
+.tulpar-glow-radial {
+  background: radial-gradient(
+    circle at center,
+    hsl(var(--tulpar-blue) / 0.15) 0%,
+    transparent 70%
+  );
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-medium tracking-tight;
+}
+
+code {
+  @apply font-mono text-xs;
+}
+
+.glass-panel {
+  background: rgba(15, 20, 25, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-caret-blink {
+  animation: caret-blink 1.25s ease-out infinite;
+}

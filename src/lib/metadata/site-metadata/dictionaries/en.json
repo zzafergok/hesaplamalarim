@@ -1,0 +1,52 @@
+{
+  "publicHome": {
+    "title": "Next.js Application Template & Starter Foundation",
+    "description": "Enterprise Next.js 16 application template and starter kit featuring multi-shell layouts, typed forms, and an educational Turkic culture showcase.",
+    "aiPurpose": "Primary public overview for AI agents summarizing the Tulpar enterprise application template architecture."
+  },
+  "publicCulture": {
+    "title": "Turkic Culture & Mythology Atlas",
+    "description": "Educational showcase featuring 40+ ancient Turkic culture cards, Göktürk color cosmology, and AI prompt studio.",
+    "aiPurpose": "Public educational Turkic culture and AI prompt generation studio showcase."
+  },
+  "publicLogin": {
+    "title": "Sign in",
+    "description": "Sign-in surface for account authentication.",
+    "aiPurpose": "Public login entry point; excluded from indexing because it is transactional."
+  },
+  "authHome": {
+    "title": "Dashboard overview",
+    "description": "Protected dashboard overview with sample data for product modules.",
+    "aiPurpose": "Authenticated dashboard route; metadata is descriptive but not intended for indexing."
+  },
+  "authWorkspace": {
+    "title": "Items workspace",
+    "description": "Protected generic list workspace for authenticated application modules.",
+    "aiPurpose": "Authenticated workspace route for internal records; excluded from public AI discovery."
+  },
+  "authSettings": {
+    "title": "Account settings",
+    "description": "Protected account-level settings for the Tulpar application shell.",
+    "aiPurpose": "Authenticated settings route; excluded from indexing and AI discovery lists."
+  },
+  "adminLogin": {
+    "title": "Admin login",
+    "description": "Admin sign-in surface for management access to the Tulpar shell.",
+    "aiPurpose": "Administrative login route; blocked from indexing and AI discovery."
+  },
+  "adminOverview": {
+    "title": "Management overview",
+    "description": "Protected management dashboard for users, settings, and Tulpar status.",
+    "aiPurpose": "Protected admin overview route; not intended for public crawlers."
+  },
+  "adminUsers": {
+    "title": "Admin users",
+    "description": "Protected admin user roster for identity management.",
+    "aiPurpose": "Protected admin users route; noindex because it models identity data."
+  },
+  "adminSettings": {
+    "title": "Admin settings",
+    "description": "Protected configuration surface for Tulpar-level controls.",
+    "aiPurpose": "Protected admin configuration route; blocked from indexing and AI discovery."
+  }
+}

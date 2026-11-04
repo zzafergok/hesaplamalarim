@@ -1,0 +1,10 @@
+{
+  "title": "Sign in",
+  "description": "Sign in with your email and password to access your account.",
+  "emailLabel": "Email",
+  "emailPlaceholder": "you@example.com",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "submitLabel": "Sign In",
+  "adminLoginLabel": "Admin login"
+}

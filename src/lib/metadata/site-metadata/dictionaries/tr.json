@@ -1,0 +1,52 @@
+{
+  "publicHome": {
+    "title": "Next.js 16 Kurumsal Uygulama Şablonu & Mimari Altyapı",
+    "description": "Çoklu uygulama kabukları, tipli formlar, özel core bileşenler ve Türk kültür vitrini içeren kurumsal Next.js 16 şablonu.",
+    "aiPurpose": "Tulpar kurumsal uygulama şablonunun mimari yapısını ve kabuklarını özetleyen AI tanıtım ekranı."
+  },
+  "publicCulture": {
+    "title": "Türk Kültür & Mitoloji Atlası",
+    "description": "40+ kadim Türk kültür kartı, Göktürk renk kozmolojisi ve Yapay Zeka (AI Prompt) stüdyosu içeren eğitici vitrin.",
+    "aiPurpose": "Halka açık eğitici Türk kültürü ve yapay zeka prompt üretim stüdyosu vitrini."
+  },
+  "publicLogin": {
+    "title": "Giriş Yap",
+    "description": "Kullanıcı hesap erişimi için giriş arayüzü.",
+    "aiPurpose": "Genel giriş noktası; işlemsel olduğu için indekslemeden hariç tutulur."
+  },
+  "authHome": {
+    "title": "Kontrol Paneli Özeti",
+    "description": "Gelecekteki ürün modülleri için örnek veriler içeren korumalı kontrol paneli özeti.",
+    "aiPurpose": "Kullanıcı kontrol paneli rotası; indeksleme için hedeflenmemiştir."
+  },
+  "authWorkspace": {
+    "title": "Çalışma Alanı",
+    "description": "Korumalı genel veri listesi ve modüler kayıt çalışma alanı.",
+    "aiPurpose": "Dahili kayıtlar için çalışma alanı rotası; genel AI keşfinden hariç tutulur."
+  },
+  "authSettings": {
+    "title": "Hesap Ayarları",
+    "description": "Tulpar uygulama kabuğu için korumalı hesap düzeyi ayarlar.",
+    "aiPurpose": "Kullanıcı ayarlar rotası; indeksleme ve AI keşif listelerinden hariç tutulur."
+  },
+  "adminLogin": {
+    "title": "Yönetici Girişi",
+    "description": "Tulpar kabuğu yönetim erişimi için yönetici giriş arayüzü.",
+    "aiPurpose": "Yönetim giriş rotası; indeksleme ve AI keşfinden engellenir."
+  },
+  "adminOverview": {
+    "title": "Yönetim Özeti",
+    "description": "Kullanıcılar, ayarlar ve platform durumu için korumalı yönetim paneli.",
+    "aiPurpose": "Korumalı yönetici genel bakış rotası; arama motorları için hedeflenmemiştir."
+  },
+  "adminUsers": {
+    "title": "Kullanıcı Yönetimi",
+    "description": "Yönetici paneli kullanıcı ve yetkilendirme listesi.",
+    "aiPurpose": "Kimlik verisini modellediği için indekslenmeyen korumalı kullanıcı rotası."
+  },
+  "adminSettings": {
+    "title": "Yönetici Ayarları",
+    "description": "Tulpar platform düzeyindeki kontroller için korumalı yapılandırma arayüzü.",
+    "aiPurpose": "Korumalı yönetici yapılandırma rotası; indeksleme ve AI keşfinden engellenir."
+  }
+}

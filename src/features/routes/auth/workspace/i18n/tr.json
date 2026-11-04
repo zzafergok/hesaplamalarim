@@ -1,0 +1,6 @@
+{
+  "title": "Çalışma Alanı Öğeleri",
+  "description": "Uygulama modülleri ve kayıtlar için genel liste alanı.",
+  "lanes": ["Yeni", "Aktif", "Tamamlandı"],
+  "placeholder": "Bu alanı daha sonra gerçek veri modelleri ve kayıtlarla yapılandırabilirsiniz."
+}

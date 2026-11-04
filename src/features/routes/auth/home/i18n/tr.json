@@ -1,0 +1,11 @@
+{
+  "badge": "Korumalı Alan",
+  "title": "Kontrol Paneli Özeti",
+  "description": "Bu korumalı alan örnek veriler kullanır; içeriği daha sonra herhangi bir iş alanıyla değiştirebilirsiniz.",
+  "actionLabel": "Örnek Ekle",
+  "metrics": [
+    { "label": "Örnek Kayıtlar", "value": "24", "icon": "boxes" },
+    { "label": "Bekleyen Öğeler", "value": "08", "icon": "activity" },
+    { "label": "Son Güncelleme", "value": "Şimdi", "icon": "clock" }
+  ]
+}
